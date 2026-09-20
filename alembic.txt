@@ -1,0 +1,11 @@
+# Check current database version
+alembic current
+
+# See latest migration
+alembic heads
+
+# Create migration
+alembic revision --autogenerate -m "description"
+
+# Apply migrations
+alembic upgrade head

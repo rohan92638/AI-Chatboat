@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+google-genai
+python-dotenv
+pydantic-settings
+tenacity
+sqlalchemy
+psycopg2-binary
+tiktoken
+alembic
