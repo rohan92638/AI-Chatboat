@@ -17,6 +17,7 @@ export default function ChatArea({
   isStreaming,
   onSend,
   onSuggestionClick,
+  provider = 'Gemini',
 }) {
   const messagesEndRef = useRef(null);
   const messagesContainerRef = useRef(null);
@@ -43,7 +44,7 @@ export default function ChatArea({
       <div className="chat-header">
         <div className="chat-header-title">
           AI Chatbot
-          <span className="model-badge">Gemini</span>
+          <span className="model-badge">{provider}</span>
         </div>
       </div>
 

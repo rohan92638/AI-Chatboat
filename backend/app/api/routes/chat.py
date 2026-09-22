@@ -9,7 +9,7 @@ from app.core.request_id import generate_request_id
 from app.database.connection import get_db
 from app.schemas.chat import ChatRequest, ChatResponse
 from app.services.context_manager import ContextManager
-from app.services.gemini_service import GeminiService
+from app.services.ai_provider import get_ai_service, get_active_model_name
 from app.services.memory_service import MemoryService
 from app.services.token_manager import TokenManager
 from app.services.usage_service import UsageService
@@ -25,7 +25,6 @@ router = APIRouter(
 )
 
 
-gemini_service = GeminiService()
 memory_service = MemoryService()
 context_manager = ContextManager()
 token_manager = TokenManager()
@@ -117,9 +116,10 @@ def chat(
             token_usage["max_tokens"],
         )
 
-        # 6. Generate normal Gemini response
+        # 6. Generate normal AI response
+        ai_service = get_ai_service()
         start_time = time.perf_counter()
-        result = gemini_service.generate_response(
+        result = ai_service.generate_response(
             request.message,
             request_id,
             history,
@@ -140,7 +140,7 @@ def chat(
         usage_record = usage_service.build_usage_record(
             request_id=request_id,
             conversation_id=request.conversation_id,
-            model=settings.GEMINI_MODEL,
+            model=get_active_model_name(),
             request_type="normal",
             final_usage=final_usage,
             status="success",
@@ -321,11 +321,12 @@ def chat_stream(
             token_usage["max_tokens"],
         )
 
-        # 6. Start Gemini streaming
+        # 6. Start AI streaming
+        ai_service = get_ai_service()
         stream_usage = {}
 
         start_time = time.perf_counter()
-        stream = gemini_service.generate_stream(
+        stream = ai_service.generate_stream(
             request.message,
             request_id,
             history,
@@ -373,7 +374,7 @@ def chat_stream(
             usage_record = usage_service.build_usage_record(
                 request_id=request_id,
                 conversation_id=request.conversation_id,
-                model=settings.GEMINI_MODEL,
+                model=get_active_model_name(),
                 request_type="streaming",
                 final_usage=final_usage,
                 status=status,

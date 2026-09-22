@@ -123,7 +123,7 @@ class TokenManager:
 
         estimated_input = token_usage["total_tokens"]
 
-        estimated_total = None
+        estimated_total = estimated_input
         if estimated_input is not None and estimated_output_tokens is not None:
             estimated_total = estimated_input + estimated_output_tokens
 

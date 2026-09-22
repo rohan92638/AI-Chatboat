@@ -31,6 +31,9 @@ app.add_middleware(
 )
 
 
+from app.core.config import settings
+from app.services.ai_provider import get_active_model_name
+
 @app.get("/health")
 def health_check():
     logger.info("Health check requested")
@@ -38,6 +41,8 @@ def health_check():
     return {
         "status": "ok",
         "message": "AI Chatbot API is running",
+        "provider": settings.AI_PROVIDER,
+        "model": get_active_model_name(),
     }
 
 

@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Sidebar from './components/Sidebar';
 import ChatArea from './components/ChatArea';
@@ -29,7 +29,20 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isStreaming, setIsStreaming] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [provider, setProvider] = useState('Gemini');
   const abortRef = useRef(null);
+
+  // ── Fetch active provider ──
+  useEffect(() => {
+    fetch('http://localhost:8000/health')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.provider) {
+          setProvider(data.provider === 'ollama' ? 'Ollama' : 'Gemini');
+        }
+      })
+      .catch(() => console.error("Could not fetch provider info"));
+  }, []);
 
   // ── Persistence ──
   const persist = (convs, activeId) => {
@@ -194,6 +207,7 @@ export default function App() {
         isStreaming={isStreaming}
         onSend={handleSend}
         onSuggestionClick={handleSuggestionClick}
+        provider={provider}
       />
     </div>
   );

@@ -2,11 +2,25 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
+    # Gemini Configuration
     GEMINI_API_KEY: str
     GEMINI_MODEL: str = "gemini-1.5-flash"
+
+    # Database
     DATABASE_URL: str
+
+    # Context / History
     MAX_HISTORY_MESSAGES: int = 20
     MAX_CONTEXT_TOKENS: int = 4000
+
+    # AI Provider Selection ("gemini" or "ollama")
+    AI_PROVIDER: str = "ollama"
+
+    # Ollama Configuration
+    OLLAMA_BASE_URL: str = "http://localhost:11434"
+    OLLAMA_MODEL: str = "qwen2.5:3b"
+
+    # System Prompt (shared by all providers)
     SYSTEM_PROMPT: str = """
 You are a helpful AI assistant.
 
