@@ -11043,3 +11043,610 @@ google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429,
 2026-09-23 00:14:44,865 | INFO | app.main | Health check requested
 2026-09-23 00:15:44,866 | INFO | app.main | Health check requested
 2026-09-23 00:15:44,878 | INFO | app.main | Health check requested
+2026-09-23 22:37:00,181 | INFO | app.main | Health check requested
+2026-09-23 22:37:00,187 | INFO | app.main | Health check requested
+2026-09-23 22:37:00,196 | INFO | app.main | Health check requested
+2026-09-23 22:37:00,214 | INFO | app.main | Health check requested
+2026-09-23 22:37:29,176 | INFO | app.api.routes.chat | request_id=f35c6edaa39e4f76ab4064af647ff7f0 | Streaming chat request received
+2026-09-23 22:37:29,622 | INFO | app.api.routes.chat | request_id=f35c6edaa39e4f76ab4064af647ff7f0 | Context messages=6 | System prompt tokens=79 | History tokens=713 | User tokens=3 | Total context tokens=795 | Remaining context tokens=3205 | Max context tokens=4000
+2026-09-23 22:37:29,627 | INFO | app.services.ollama_service | request_id=f35c6edaa39e4f76ab4064af647ff7f0 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:37:30,172 | INFO | app.main | Health check requested
+2026-09-23 22:38:00,164 | INFO | app.main | Health check requested
+2026-09-23 22:38:01,683 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:38:08,071 | INFO | app.services.ollama_service | request_id=f35c6edaa39e4f76ab4064af647ff7f0 | Ollama stream finished. Usage: prompt_eval_count=913, eval_count=76
+2026-09-23 22:38:08,072 | INFO | app.api.routes.chat | request_id=f35c6edaa39e4f76ab4064af647ff7f0 | Final Token Usage: {'estimated_input_tokens': 795, 'estimated_output_tokens': 105, 'estimated_total_tokens': 900, 'provider_input_tokens': 913, 'provider_output_tokens': 76, 'provider_total_tokens': 989}
+2026-09-23 22:38:08,073 | INFO | app.api.routes.chat | request_id=f35c6edaa39e4f76ab4064af647ff7f0 | Usage Record: {'request_id': 'f35c6edaa39e4f76ab4064af647ff7f0', 'conversation_id': '917cff50-8f28-4fd9-8c8b-1e4a2fdeab67', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 795, 'estimated_output_tokens': 105, 'estimated_total_tokens': 900, 'provider_input_tokens': 913, 'provider_output_tokens': 76, 'provider_total_tokens': 989, 'status': 'success', 'latency_ms': 38448, 'created_at': datetime.datetime(2026, 9, 23, 17, 8, 8, 72128)}
+2026-09-23 22:38:08,163 | INFO | app.api.routes.chat | request_id=f35c6edaa39e4f76ab4064af647ff7f0 | Chat streaming completed successfully
+2026-09-23 22:38:30,786 | INFO | app.main | Health check requested
+2026-09-23 22:39:00,789 | INFO | app.main | Health check requested
+2026-09-23 22:39:30,781 | INFO | app.main | Health check requested
+2026-09-23 22:40:00,799 | INFO | app.main | Health check requested
+2026-09-23 22:40:33,782 | INFO | app.main | Health check requested
+2026-09-23 22:41:33,774 | INFO | app.main | Health check requested
+2026-09-23 22:42:33,781 | INFO | app.main | Health check requested
+2026-09-23 22:43:33,784 | INFO | app.main | Health check requested
+2026-09-23 22:44:00,787 | INFO | app.main | Health check requested
+2026-09-23 22:44:30,789 | INFO | app.main | Health check requested
+2026-09-23 22:45:33,803 | INFO | app.main | Health check requested
+2026-09-23 22:45:40,583 | INFO | app.api.routes.chat | request_id=5fe0b25dd8144012b19e8fab14e0ceaf | Streaming chat request received
+2026-09-23 22:45:40,608 | INFO | app.api.routes.chat | request_id=5fe0b25dd8144012b19e8fab14e0ceaf | Context messages=0 | System prompt tokens=79 | History tokens=0 | User tokens=16 | Total context tokens=95 | Remaining context tokens=3905 | Max context tokens=4000
+2026-09-23 22:45:40,614 | INFO | app.services.ollama_service | request_id=5fe0b25dd8144012b19e8fab14e0ceaf | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:45:46,970 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:45:49,627 | INFO | app.services.ollama_service | request_id=5fe0b25dd8144012b19e8fab14e0ceaf | Ollama stream finished. Usage: prompt_eval_count=89, eval_count=43
+2026-09-23 22:45:49,627 | INFO | app.api.routes.chat | request_id=5fe0b25dd8144012b19e8fab14e0ceaf | Final Token Usage: {'estimated_input_tokens': 95, 'estimated_output_tokens': 45, 'estimated_total_tokens': 140, 'provider_input_tokens': 89, 'provider_output_tokens': 43, 'provider_total_tokens': 132}
+2026-09-23 22:45:49,627 | INFO | app.api.routes.chat | request_id=5fe0b25dd8144012b19e8fab14e0ceaf | Usage Record: {'request_id': '5fe0b25dd8144012b19e8fab14e0ceaf', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 95, 'estimated_output_tokens': 45, 'estimated_total_tokens': 140, 'provider_input_tokens': 89, 'provider_output_tokens': 43, 'provider_total_tokens': 132, 'status': 'success', 'latency_ms': 9017, 'created_at': datetime.datetime(2026, 9, 23, 17, 15, 49, 627540)}
+2026-09-23 22:45:49,637 | INFO | app.api.routes.chat | request_id=5fe0b25dd8144012b19e8fab14e0ceaf | Chat streaming completed successfully
+2026-09-23 22:46:00,780 | INFO | app.main | Health check requested
+2026-09-23 22:46:09,564 | INFO | app.api.routes.chat | request_id=2f3f47745e2b4677870605edd6d35f77 | Streaming chat request received
+2026-09-23 22:46:09,574 | INFO | app.api.routes.chat | request_id=2f3f47745e2b4677870605edd6d35f77 | Context messages=2 | System prompt tokens=79 | History tokens=61 | User tokens=18 | Total context tokens=158 | Remaining context tokens=3842 | Max context tokens=4000
+2026-09-23 22:46:09,580 | INFO | app.services.ollama_service | request_id=2f3f47745e2b4677870605edd6d35f77 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:46:13,242 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:46:14,315 | INFO | app.services.ollama_service | request_id=2f3f47745e2b4677870605edd6d35f77 | Ollama stream finished. Usage: prompt_eval_count=153, eval_count=19
+2026-09-23 22:46:14,315 | INFO | app.api.routes.chat | request_id=2f3f47745e2b4677870605edd6d35f77 | Final Token Usage: {'estimated_input_tokens': 158, 'estimated_output_tokens': 23, 'estimated_total_tokens': 181, 'provider_input_tokens': 153, 'provider_output_tokens': 19, 'provider_total_tokens': 172}
+2026-09-23 22:46:14,316 | INFO | app.api.routes.chat | request_id=2f3f47745e2b4677870605edd6d35f77 | Usage Record: {'request_id': '2f3f47745e2b4677870605edd6d35f77', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 158, 'estimated_output_tokens': 23, 'estimated_total_tokens': 181, 'provider_input_tokens': 153, 'provider_output_tokens': 19, 'provider_total_tokens': 172, 'status': 'success', 'latency_ms': 4739, 'created_at': datetime.datetime(2026, 9, 23, 17, 16, 14, 315635)}
+2026-09-23 22:46:14,326 | INFO | app.api.routes.chat | request_id=2f3f47745e2b4677870605edd6d35f77 | Chat streaming completed successfully
+2026-09-23 22:46:27,945 | INFO | app.api.routes.chat | request_id=ddb41a7815d24f17bec3d431a2ab164f | Streaming chat request received
+2026-09-23 22:46:27,954 | INFO | app.api.routes.chat | request_id=ddb41a7815d24f17bec3d431a2ab164f | Context messages=4 | System prompt tokens=79 | History tokens=102 | User tokens=11 | Total context tokens=192 | Remaining context tokens=3808 | Max context tokens=4000
+2026-09-23 22:46:27,959 | INFO | app.services.ollama_service | request_id=ddb41a7815d24f17bec3d431a2ab164f | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:46:30,150 | INFO | app.main | Health check requested
+2026-09-23 22:46:31,051 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:46:33,495 | INFO | app.services.ollama_service | request_id=ddb41a7815d24f17bec3d431a2ab164f | Ollama stream finished. Usage: prompt_eval_count=190, eval_count=41
+2026-09-23 22:46:33,496 | INFO | app.api.routes.chat | request_id=ddb41a7815d24f17bec3d431a2ab164f | Final Token Usage: {'estimated_input_tokens': 192, 'estimated_output_tokens': 54, 'estimated_total_tokens': 246, 'provider_input_tokens': 190, 'provider_output_tokens': 41, 'provider_total_tokens': 231}
+2026-09-23 22:46:33,497 | INFO | app.api.routes.chat | request_id=ddb41a7815d24f17bec3d431a2ab164f | Usage Record: {'request_id': 'ddb41a7815d24f17bec3d431a2ab164f', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 192, 'estimated_output_tokens': 54, 'estimated_total_tokens': 246, 'provider_input_tokens': 190, 'provider_output_tokens': 41, 'provider_total_tokens': 231, 'status': 'success', 'latency_ms': 5541, 'created_at': datetime.datetime(2026, 9, 23, 17, 16, 33, 496512)}
+2026-09-23 22:46:33,506 | INFO | app.api.routes.chat | request_id=ddb41a7815d24f17bec3d431a2ab164f | Chat streaming completed successfully
+2026-09-23 22:46:48,408 | INFO | app.api.routes.chat | request_id=31260acd9ff14c25acfd965c1ca465b8 | Streaming chat request received
+2026-09-23 22:46:48,421 | INFO | app.api.routes.chat | request_id=31260acd9ff14c25acfd965c1ca465b8 | Context messages=6 | System prompt tokens=79 | History tokens=167 | User tokens=18 | Total context tokens=264 | Remaining context tokens=3736 | Max context tokens=4000
+2026-09-23 22:46:48,427 | INFO | app.services.ollama_service | request_id=31260acd9ff14c25acfd965c1ca465b8 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:46:51,906 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:46:54,257 | INFO | app.services.ollama_service | request_id=31260acd9ff14c25acfd965c1ca465b8 | Ollama stream finished. Usage: prompt_eval_count=252, eval_count=40
+2026-09-23 22:46:54,258 | INFO | app.api.routes.chat | request_id=31260acd9ff14c25acfd965c1ca465b8 | Final Token Usage: {'estimated_input_tokens': 264, 'estimated_output_tokens': 47, 'estimated_total_tokens': 311, 'provider_input_tokens': 252, 'provider_output_tokens': 40, 'provider_total_tokens': 292}
+2026-09-23 22:46:54,258 | INFO | app.api.routes.chat | request_id=31260acd9ff14c25acfd965c1ca465b8 | Usage Record: {'request_id': '31260acd9ff14c25acfd965c1ca465b8', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 264, 'estimated_output_tokens': 47, 'estimated_total_tokens': 311, 'provider_input_tokens': 252, 'provider_output_tokens': 40, 'provider_total_tokens': 292, 'status': 'success', 'latency_ms': 5835, 'created_at': datetime.datetime(2026, 9, 23, 17, 16, 54, 258426)}
+2026-09-23 22:46:54,268 | INFO | app.api.routes.chat | request_id=31260acd9ff14c25acfd965c1ca465b8 | Chat streaming completed successfully
+2026-09-23 22:47:00,172 | INFO | app.main | Health check requested
+2026-09-23 22:47:09,575 | INFO | app.api.routes.chat | request_id=9ffb787d14284e57bd972ced2b2a1309 | Streaming chat request received
+2026-09-23 22:47:09,584 | INFO | app.api.routes.chat | request_id=9ffb787d14284e57bd972ced2b2a1309 | Context messages=8 | System prompt tokens=79 | History tokens=232 | User tokens=10 | Total context tokens=321 | Remaining context tokens=3679 | Max context tokens=4000
+2026-09-23 22:47:09,589 | INFO | app.services.ollama_service | request_id=9ffb787d14284e57bd972ced2b2a1309 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:47:13,107 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:47:15,482 | INFO | app.services.ollama_service | request_id=9ffb787d14284e57bd972ced2b2a1309 | Ollama stream finished. Usage: prompt_eval_count=308, eval_count=40
+2026-09-23 22:47:15,482 | INFO | app.api.routes.chat | request_id=9ffb787d14284e57bd972ced2b2a1309 | Final Token Usage: {'estimated_input_tokens': 321, 'estimated_output_tokens': 47, 'estimated_total_tokens': 368, 'provider_input_tokens': 308, 'provider_output_tokens': 40, 'provider_total_tokens': 348}
+2026-09-23 22:47:15,482 | INFO | app.api.routes.chat | request_id=9ffb787d14284e57bd972ced2b2a1309 | Usage Record: {'request_id': '9ffb787d14284e57bd972ced2b2a1309', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 321, 'estimated_output_tokens': 47, 'estimated_total_tokens': 368, 'provider_input_tokens': 308, 'provider_output_tokens': 40, 'provider_total_tokens': 348, 'status': 'success', 'latency_ms': 5896, 'created_at': datetime.datetime(2026, 9, 23, 17, 17, 15, 482863)}
+2026-09-23 22:47:15,492 | INFO | app.api.routes.chat | request_id=9ffb787d14284e57bd972ced2b2a1309 | Chat streaming completed successfully
+2026-09-23 22:47:30,154 | INFO | app.main | Health check requested
+2026-09-23 22:48:00,775 | INFO | app.main | Health check requested
+2026-09-23 22:48:30,778 | INFO | app.main | Health check requested
+2026-09-23 22:49:31,785 | INFO | app.main | Health check requested
+2026-09-23 22:50:32,786 | INFO | app.main | Health check requested
+2026-09-23 22:51:33,790 | INFO | app.main | Health check requested
+2026-09-23 22:52:33,778 | INFO | app.main | Health check requested
+2026-09-23 22:53:33,787 | INFO | app.main | Health check requested
+2026-09-23 22:54:33,785 | INFO | app.main | Health check requested
+2026-09-23 22:55:55,780 | INFO | app.main | Health check requested
+2026-09-23 22:55:55,782 | INFO | app.main | Health check requested
+2026-09-23 22:55:55,787 | INFO | app.main | Health check requested
+2026-09-23 22:55:55,793 | INFO | app.main | Health check requested
+2026-09-23 22:55:56,925 | INFO | app.main | Health check requested
+2026-09-23 22:55:56,927 | INFO | app.main | Health check requested
+2026-09-23 22:55:56,930 | INFO | app.main | Health check requested
+2026-09-23 22:55:56,932 | INFO | app.main | Health check requested
+2026-09-23 22:56:15,549 | INFO | app.api.routes.chat | request_id=ca99d340aa084541a8f52078f1d0275c | Streaming chat request received
+2026-09-23 22:56:15,626 | INFO | app.api.routes.chat | request_id=ca99d340aa084541a8f52078f1d0275c | Context messages=10 | System prompt tokens=321 | History tokens=289 | User tokens=16 | Total context tokens=626 | Remaining context tokens=3374 | Max context tokens=4000
+2026-09-23 22:56:15,630 | INFO | app.services.ollama_service | request_id=ca99d340aa084541a8f52078f1d0275c | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:56:26,932 | INFO | app.main | Health check requested
+2026-09-23 22:56:33,836 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:56:36,549 | INFO | app.services.ollama_service | request_id=ca99d340aa084541a8f52078f1d0275c | Ollama stream finished. Usage: prompt_eval_count=570, eval_count=34
+2026-09-23 22:56:36,550 | INFO | app.api.routes.chat | request_id=ca99d340aa084541a8f52078f1d0275c | Final Token Usage: {'estimated_input_tokens': 626, 'estimated_output_tokens': 39, 'estimated_total_tokens': 665, 'provider_input_tokens': 570, 'provider_output_tokens': 34, 'provider_total_tokens': 604}
+2026-09-23 22:56:36,550 | INFO | app.api.routes.chat | request_id=ca99d340aa084541a8f52078f1d0275c | Usage Record: {'request_id': 'ca99d340aa084541a8f52078f1d0275c', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 626, 'estimated_output_tokens': 39, 'estimated_total_tokens': 665, 'provider_input_tokens': 570, 'provider_output_tokens': 34, 'provider_total_tokens': 604, 'status': 'success', 'latency_ms': 20922, 'created_at': datetime.datetime(2026, 9, 23, 17, 26, 36, 550311)}
+2026-09-23 22:56:36,581 | INFO | app.api.routes.chat | request_id=ca99d340aa084541a8f52078f1d0275c | Chat streaming completed successfully
+2026-09-23 22:56:55,798 | INFO | app.api.routes.chat | request_id=98cf4cce7abe4d729d4f239f88e909ef | Streaming chat request received
+2026-09-23 22:56:55,807 | INFO | app.api.routes.chat | request_id=98cf4cce7abe4d729d4f239f88e909ef | Context messages=12 | System prompt tokens=321 | History tokens=344 | User tokens=18 | Total context tokens=683 | Remaining context tokens=3317 | Max context tokens=4000
+2026-09-23 22:56:55,811 | INFO | app.services.ollama_service | request_id=98cf4cce7abe4d729d4f239f88e909ef | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:56:56,945 | INFO | app.main | Health check requested
+2026-09-23 22:56:59,372 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:57:02,467 | INFO | app.services.ollama_service | request_id=98cf4cce7abe4d729d4f239f88e909ef | Ollama stream finished. Usage: prompt_eval_count=625, eval_count=47
+2026-09-23 22:57:02,467 | INFO | app.api.routes.chat | request_id=98cf4cce7abe4d729d4f239f88e909ef | Final Token Usage: {'estimated_input_tokens': 683, 'estimated_output_tokens': 60, 'estimated_total_tokens': 743, 'provider_input_tokens': 625, 'provider_output_tokens': 47, 'provider_total_tokens': 672}
+2026-09-23 22:57:02,468 | INFO | app.api.routes.chat | request_id=98cf4cce7abe4d729d4f239f88e909ef | Usage Record: {'request_id': '98cf4cce7abe4d729d4f239f88e909ef', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 683, 'estimated_output_tokens': 60, 'estimated_total_tokens': 743, 'provider_input_tokens': 625, 'provider_output_tokens': 47, 'provider_total_tokens': 672, 'status': 'success', 'latency_ms': 6658, 'created_at': datetime.datetime(2026, 9, 23, 17, 27, 2, 467806)}
+2026-09-23 22:57:02,478 | INFO | app.api.routes.chat | request_id=98cf4cce7abe4d729d4f239f88e909ef | Chat streaming completed successfully
+2026-09-23 22:57:18,846 | INFO | app.api.routes.chat | request_id=47b989d49a764cd1b28c685bcce5b94e | Streaming chat request received
+2026-09-23 22:57:18,853 | INFO | app.api.routes.chat | request_id=47b989d49a764cd1b28c685bcce5b94e | Context messages=14 | System prompt tokens=321 | History tokens=422 | User tokens=11 | Total context tokens=754 | Remaining context tokens=3246 | Max context tokens=4000
+2026-09-23 22:57:18,859 | INFO | app.services.ollama_service | request_id=47b989d49a764cd1b28c685bcce5b94e | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:57:22,596 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:57:24,964 | INFO | app.services.ollama_service | request_id=47b989d49a764cd1b28c685bcce5b94e | Ollama stream finished. Usage: prompt_eval_count=690, eval_count=37
+2026-09-23 22:57:24,965 | INFO | app.api.routes.chat | request_id=47b989d49a764cd1b28c685bcce5b94e | Final Token Usage: {'estimated_input_tokens': 754, 'estimated_output_tokens': 49, 'estimated_total_tokens': 803, 'provider_input_tokens': 690, 'provider_output_tokens': 37, 'provider_total_tokens': 727}
+2026-09-23 22:57:24,965 | INFO | app.api.routes.chat | request_id=47b989d49a764cd1b28c685bcce5b94e | Usage Record: {'request_id': '47b989d49a764cd1b28c685bcce5b94e', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 754, 'estimated_output_tokens': 49, 'estimated_total_tokens': 803, 'provider_input_tokens': 690, 'provider_output_tokens': 37, 'provider_total_tokens': 727, 'status': 'success', 'latency_ms': 6109, 'created_at': datetime.datetime(2026, 9, 23, 17, 27, 24, 965419)}
+2026-09-23 22:57:24,975 | INFO | app.api.routes.chat | request_id=47b989d49a764cd1b28c685bcce5b94e | Chat streaming completed successfully
+2026-09-23 22:57:27,782 | INFO | app.main | Health check requested
+2026-09-23 22:57:36,977 | INFO | app.api.routes.chat | request_id=8e93b70543aa4201bad70f6992583da7 | Streaming chat request received
+2026-09-23 22:57:36,981 | INFO | app.api.routes.chat | request_id=8e93b70543aa4201bad70f6992583da7 | Context messages=16 | System prompt tokens=321 | History tokens=482 | User tokens=18 | Total context tokens=821 | Remaining context tokens=3179 | Max context tokens=4000
+2026-09-23 22:57:36,982 | INFO | app.services.ollama_service | request_id=8e93b70543aa4201bad70f6992583da7 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:57:40,567 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:57:42,417 | INFO | app.services.ollama_service | request_id=8e93b70543aa4201bad70f6992583da7 | Ollama stream finished. Usage: prompt_eval_count=748, eval_count=29
+2026-09-23 22:57:42,418 | INFO | app.api.routes.chat | request_id=8e93b70543aa4201bad70f6992583da7 | Final Token Usage: {'estimated_input_tokens': 821, 'estimated_output_tokens': 35, 'estimated_total_tokens': 856, 'provider_input_tokens': 748, 'provider_output_tokens': 29, 'provider_total_tokens': 777}
+2026-09-23 22:57:42,418 | INFO | app.api.routes.chat | request_id=8e93b70543aa4201bad70f6992583da7 | Usage Record: {'request_id': '8e93b70543aa4201bad70f6992583da7', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 821, 'estimated_output_tokens': 35, 'estimated_total_tokens': 856, 'provider_input_tokens': 748, 'provider_output_tokens': 29, 'provider_total_tokens': 777, 'status': 'success', 'latency_ms': 5436, 'created_at': datetime.datetime(2026, 9, 23, 17, 27, 42, 418373)}
+2026-09-23 22:57:42,428 | INFO | app.api.routes.chat | request_id=8e93b70543aa4201bad70f6992583da7 | Chat streaming completed successfully
+2026-09-23 22:57:57,778 | INFO | app.main | Health check requested
+2026-09-23 22:58:03,235 | INFO | app.api.routes.chat | request_id=45b54ed500e14970b4526649d1ebd76c | Streaming chat request received
+2026-09-23 22:58:03,239 | INFO | app.api.routes.chat | request_id=45b54ed500e14970b4526649d1ebd76c | Context messages=18 | System prompt tokens=321 | History tokens=535 | User tokens=10 | Total context tokens=866 | Remaining context tokens=3134 | Max context tokens=4000
+2026-09-23 22:58:03,243 | INFO | app.services.ollama_service | request_id=45b54ed500e14970b4526649d1ebd76c | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 22:58:06,658 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 22:58:09,231 | INFO | app.services.ollama_service | request_id=45b54ed500e14970b4526649d1ebd76c | Ollama stream finished. Usage: prompt_eval_count=793, eval_count=39
+2026-09-23 22:58:09,232 | INFO | app.api.routes.chat | request_id=45b54ed500e14970b4526649d1ebd76c | Final Token Usage: {'estimated_input_tokens': 866, 'estimated_output_tokens': 45, 'estimated_total_tokens': 911, 'provider_input_tokens': 793, 'provider_output_tokens': 39, 'provider_total_tokens': 832}
+2026-09-23 22:58:09,232 | INFO | app.api.routes.chat | request_id=45b54ed500e14970b4526649d1ebd76c | Usage Record: {'request_id': '45b54ed500e14970b4526649d1ebd76c', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 866, 'estimated_output_tokens': 45, 'estimated_total_tokens': 911, 'provider_input_tokens': 793, 'provider_output_tokens': 39, 'provider_total_tokens': 832, 'status': 'success', 'latency_ms': 5992, 'created_at': datetime.datetime(2026, 9, 23, 17, 28, 9, 232289)}
+2026-09-23 22:58:09,241 | INFO | app.api.routes.chat | request_id=45b54ed500e14970b4526649d1ebd76c | Chat streaming completed successfully
+2026-09-23 22:58:27,783 | INFO | app.main | Health check requested
+2026-09-23 22:58:57,783 | INFO | app.main | Health check requested
+2026-09-23 22:59:33,780 | INFO | app.main | Health check requested
+2026-09-23 23:00:33,776 | INFO | app.main | Health check requested
+2026-09-23 23:01:49,120 | INFO | app.main | Health check requested
+2026-09-23 23:02:31,266 | INFO | app.main | Health check requested
+2026-09-23 23:02:31,690 | INFO | app.main | Health check requested
+2026-09-23 23:02:31,691 | INFO | app.main | Health check requested
+2026-09-23 23:02:31,695 | INFO | app.main | Health check requested
+2026-09-23 23:02:31,700 | INFO | app.main | Health check requested
+2026-09-23 23:02:34,422 | INFO | app.main | Health check requested
+2026-09-23 23:02:34,422 | INFO | app.main | Health check requested
+2026-09-23 23:02:34,427 | INFO | app.main | Health check requested
+2026-09-23 23:02:34,427 | INFO | app.main | Health check requested
+2026-09-23 23:02:41,451 | INFO | app.api.routes.chat | request_id=67d5f43169e54698b64b1d717629b031 | Streaming chat request received
+2026-09-23 23:02:41,556 | INFO | app.api.routes.chat | request_id=67d5f43169e54698b64b1d717629b031 | Context messages=20 | System prompt tokens=373 | History tokens=590 | User tokens=16 | Total context tokens=979 | Remaining context tokens=3021 | Max context tokens=4000
+2026-09-23 23:02:41,559 | INFO | app.services.ollama_service | request_id=67d5f43169e54698b64b1d717629b031 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:03:03,718 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:03:04,444 | INFO | app.main | Health check requested
+2026-09-23 23:03:07,337 | INFO | app.services.ollama_service | request_id=67d5f43169e54698b64b1d717629b031 | Ollama stream finished. Usage: prompt_eval_count=892, eval_count=34
+2026-09-23 23:03:07,339 | INFO | app.api.routes.chat | request_id=67d5f43169e54698b64b1d717629b031 | Final Token Usage: {'estimated_input_tokens': 979, 'estimated_output_tokens': 39, 'estimated_total_tokens': 1018, 'provider_input_tokens': 892, 'provider_output_tokens': 34, 'provider_total_tokens': 926}
+2026-09-23 23:03:07,339 | INFO | app.api.routes.chat | request_id=67d5f43169e54698b64b1d717629b031 | Usage Record: {'request_id': '67d5f43169e54698b64b1d717629b031', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 979, 'estimated_output_tokens': 39, 'estimated_total_tokens': 1018, 'provider_input_tokens': 892, 'provider_output_tokens': 34, 'provider_total_tokens': 926, 'status': 'success', 'latency_ms': 25781, 'created_at': datetime.datetime(2026, 9, 23, 17, 33, 7, 339342)}
+2026-09-23 23:03:07,381 | INFO | app.api.routes.chat | request_id=67d5f43169e54698b64b1d717629b031 | Chat streaming completed successfully
+2026-09-23 23:03:25,959 | INFO | app.api.routes.chat | request_id=ffb69fa95b4045e88bb27aa7f9dfeede | Streaming chat request received
+2026-09-23 23:03:25,965 | INFO | app.api.routes.chat | request_id=ffb69fa95b4045e88bb27aa7f9dfeede | Context messages=20 | System prompt tokens=373 | History tokens=584 | User tokens=18 | Total context tokens=975 | Remaining context tokens=3025 | Max context tokens=4000
+2026-09-23 23:03:25,969 | INFO | app.services.ollama_service | request_id=ffb69fa95b4045e88bb27aa7f9dfeede | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:03:34,440 | INFO | app.main | Health check requested
+2026-09-23 23:03:43,174 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:03:46,740 | INFO | app.services.ollama_service | request_id=ffb69fa95b4045e88bb27aa7f9dfeede | Ollama stream finished. Usage: prompt_eval_count=884, eval_count=34
+2026-09-23 23:03:46,741 | INFO | app.api.routes.chat | request_id=ffb69fa95b4045e88bb27aa7f9dfeede | Final Token Usage: {'estimated_input_tokens': 975, 'estimated_output_tokens': 41, 'estimated_total_tokens': 1016, 'provider_input_tokens': 884, 'provider_output_tokens': 34, 'provider_total_tokens': 918}
+2026-09-23 23:03:46,741 | INFO | app.api.routes.chat | request_id=ffb69fa95b4045e88bb27aa7f9dfeede | Usage Record: {'request_id': 'ffb69fa95b4045e88bb27aa7f9dfeede', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 975, 'estimated_output_tokens': 41, 'estimated_total_tokens': 1016, 'provider_input_tokens': 884, 'provider_output_tokens': 34, 'provider_total_tokens': 918, 'status': 'success', 'latency_ms': 20774, 'created_at': datetime.datetime(2026, 9, 23, 17, 33, 46, 741397)}
+2026-09-23 23:03:46,763 | INFO | app.api.routes.chat | request_id=ffb69fa95b4045e88bb27aa7f9dfeede | Chat streaming completed successfully
+2026-09-23 23:04:04,431 | INFO | app.main | Health check requested
+2026-09-23 23:04:06,454 | INFO | app.api.routes.chat | request_id=533d95d36bfc4cb18001ddd451c15f86 | Streaming chat request received
+2026-09-23 23:04:06,460 | INFO | app.api.routes.chat | request_id=533d95d36bfc4cb18001ddd451c15f86 | Context messages=20 | System prompt tokens=373 | History tokens=602 | User tokens=11 | Total context tokens=986 | Remaining context tokens=3014 | Max context tokens=4000
+2026-09-23 23:04:06,462 | INFO | app.services.ollama_service | request_id=533d95d36bfc4cb18001ddd451c15f86 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:04:23,698 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:04:27,748 | INFO | app.services.ollama_service | request_id=533d95d36bfc4cb18001ddd451c15f86 | Ollama stream finished. Usage: prompt_eval_count=896, eval_count=39
+2026-09-23 23:04:27,749 | INFO | app.api.routes.chat | request_id=533d95d36bfc4cb18001ddd451c15f86 | Final Token Usage: {'estimated_input_tokens': 986, 'estimated_output_tokens': 50, 'estimated_total_tokens': 1036, 'provider_input_tokens': 896, 'provider_output_tokens': 39, 'provider_total_tokens': 935}
+2026-09-23 23:04:27,750 | INFO | app.api.routes.chat | request_id=533d95d36bfc4cb18001ddd451c15f86 | Usage Record: {'request_id': '533d95d36bfc4cb18001ddd451c15f86', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 986, 'estimated_output_tokens': 50, 'estimated_total_tokens': 1036, 'provider_input_tokens': 896, 'provider_output_tokens': 39, 'provider_total_tokens': 935, 'status': 'success', 'latency_ms': 21288, 'created_at': datetime.datetime(2026, 9, 23, 17, 34, 27, 749877)}
+2026-09-23 23:04:27,793 | INFO | app.api.routes.chat | request_id=533d95d36bfc4cb18001ddd451c15f86 | Chat streaming completed successfully
+2026-09-23 23:04:34,429 | INFO | app.main | Health check requested
+2026-09-23 23:04:37,324 | INFO | app.api.routes.chat | request_id=5fecdd8fd44f446aae321c4511e66734 | Streaming chat request received
+2026-09-23 23:04:37,331 | INFO | app.api.routes.chat | request_id=5fecdd8fd44f446aae321c4511e66734 | Context messages=20 | System prompt tokens=373 | History tokens=598 | User tokens=18 | Total context tokens=989 | Remaining context tokens=3011 | Max context tokens=4000
+2026-09-23 23:04:37,333 | INFO | app.services.ollama_service | request_id=5fecdd8fd44f446aae321c4511e66734 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:04:57,031 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:05:00,778 | INFO | app.services.ollama_service | request_id=5fecdd8fd44f446aae321c4511e66734 | Ollama stream finished. Usage: prompt_eval_count=897, eval_count=33
+2026-09-23 23:05:00,780 | INFO | app.api.routes.chat | request_id=5fecdd8fd44f446aae321c4511e66734 | Final Token Usage: {'estimated_input_tokens': 989, 'estimated_output_tokens': 41, 'estimated_total_tokens': 1030, 'provider_input_tokens': 897, 'provider_output_tokens': 33, 'provider_total_tokens': 930}
+2026-09-23 23:05:00,780 | INFO | app.api.routes.chat | request_id=5fecdd8fd44f446aae321c4511e66734 | Usage Record: {'request_id': '5fecdd8fd44f446aae321c4511e66734', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 989, 'estimated_output_tokens': 41, 'estimated_total_tokens': 1030, 'provider_input_tokens': 897, 'provider_output_tokens': 33, 'provider_total_tokens': 930, 'status': 'success', 'latency_ms': 23447, 'created_at': datetime.datetime(2026, 9, 23, 17, 35, 0, 779460)}
+2026-09-23 23:05:00,801 | INFO | app.api.routes.chat | request_id=5fecdd8fd44f446aae321c4511e66734 | Chat streaming completed successfully
+2026-09-23 23:05:04,438 | INFO | app.main | Health check requested
+2026-09-23 23:05:08,393 | INFO | app.api.routes.chat | request_id=2a74eaa919ca498abe87049cb1b1f74c | Streaming chat request received
+2026-09-23 23:05:08,397 | INFO | app.api.routes.chat | request_id=2a74eaa919ca498abe87049cb1b1f74c | Context messages=20 | System prompt tokens=373 | History tokens=592 | User tokens=10 | Total context tokens=975 | Remaining context tokens=3025 | Max context tokens=4000
+2026-09-23 23:05:08,401 | INFO | app.services.ollama_service | request_id=2a74eaa919ca498abe87049cb1b1f74c | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:05:27,336 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:05:30,902 | INFO | app.services.ollama_service | request_id=2a74eaa919ca498abe87049cb1b1f74c | Ollama stream finished. Usage: prompt_eval_count=885, eval_count=34
+2026-09-23 23:05:30,903 | INFO | app.api.routes.chat | request_id=2a74eaa919ca498abe87049cb1b1f74c | Final Token Usage: {'estimated_input_tokens': 975, 'estimated_output_tokens': 39, 'estimated_total_tokens': 1014, 'provider_input_tokens': 885, 'provider_output_tokens': 34, 'provider_total_tokens': 919}
+2026-09-23 23:05:30,904 | INFO | app.api.routes.chat | request_id=2a74eaa919ca498abe87049cb1b1f74c | Usage Record: {'request_id': '2a74eaa919ca498abe87049cb1b1f74c', 'conversation_id': '05b9fa01-89fc-4455-91cc-d7bee018716d', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 975, 'estimated_output_tokens': 39, 'estimated_total_tokens': 1014, 'provider_input_tokens': 885, 'provider_output_tokens': 34, 'provider_total_tokens': 919, 'status': 'success', 'latency_ms': 22504, 'created_at': datetime.datetime(2026, 9, 23, 17, 35, 30, 903882)}
+2026-09-23 23:05:30,923 | INFO | app.api.routes.chat | request_id=2a74eaa919ca498abe87049cb1b1f74c | Chat streaming completed successfully
+2026-09-23 23:05:34,431 | INFO | app.main | Health check requested
+2026-09-23 23:06:04,789 | INFO | app.main | Health check requested
+2026-09-23 23:06:34,776 | INFO | app.main | Health check requested
+2026-09-23 23:07:33,780 | INFO | app.main | Health check requested
+2026-09-23 23:08:33,789 | INFO | app.main | Health check requested
+2026-09-23 23:09:33,786 | INFO | app.main | Health check requested
+2026-09-23 23:10:33,787 | INFO | app.main | Health check requested
+2026-09-23 23:11:33,788 | INFO | app.main | Health check requested
+2026-09-23 23:12:33,792 | INFO | app.main | Health check requested
+2026-09-23 23:14:24,917 | INFO | app.main | Health check requested
+2026-09-23 23:14:33,780 | INFO | app.main | Health check requested
+2026-09-23 23:14:56,454 | INFO | app.main | Health check requested
+2026-09-23 23:14:56,457 | INFO | app.main | Health check requested
+2026-09-23 23:14:56,460 | INFO | app.main | Health check requested
+2026-09-23 23:14:56,470 | INFO | app.main | Health check requested
+2026-09-23 23:14:57,548 | INFO | app.main | Health check requested
+2026-09-23 23:14:57,550 | INFO | app.main | Health check requested
+2026-09-23 23:14:57,554 | INFO | app.main | Health check requested
+2026-09-23 23:14:57,554 | INFO | app.main | Health check requested
+2026-09-23 23:15:20,955 | WARNING | app.api.routes.chat | request_id=2ff77d996de14b57ba2c58200a8d7a7b | Prompt injection detected | reason=instruction_override
+2026-09-23 23:15:27,567 | INFO | app.main | Health check requested
+2026-09-23 23:15:34,077 | WARNING | app.api.routes.chat | request_id=ccbbca287ea440cf91fd9d4cdf769506 | Prompt injection detected | reason=instruction_override
+2026-09-23 23:15:41,382 | WARNING | app.api.routes.chat | request_id=4a05d524604141d7bad071dd0ef8f979 | Prompt injection detected | reason=system_prompt_extraction
+2026-09-23 23:15:48,809 | INFO | app.api.routes.chat | request_id=3c6c4d469f6c4143bcbcedc3f965b7ec | Streaming chat request received
+2026-09-23 23:15:48,914 | INFO | app.api.routes.chat | request_id=3c6c4d469f6c4143bcbcedc3f965b7ec | Context messages=0 | System prompt tokens=373 | History tokens=0 | User tokens=18 | Total context tokens=391 | Remaining context tokens=3609 | Max context tokens=4000
+2026-09-23 23:15:48,917 | INFO | app.services.ollama_service | request_id=3c6c4d469f6c4143bcbcedc3f965b7ec | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:15:57,788 | INFO | app.main | Health check requested
+2026-09-23 23:16:00,875 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:16:08,904 | INFO | app.services.ollama_service | request_id=3c6c4d469f6c4143bcbcedc3f965b7ec | Ollama stream finished. Usage: prompt_eval_count=332, eval_count=71
+2026-09-23 23:16:08,905 | INFO | app.api.routes.chat | request_id=3c6c4d469f6c4143bcbcedc3f965b7ec | Final Token Usage: {'estimated_input_tokens': 391, 'estimated_output_tokens': 87, 'estimated_total_tokens': 478, 'provider_input_tokens': 332, 'provider_output_tokens': 71, 'provider_total_tokens': 403}
+2026-09-23 23:16:08,906 | INFO | app.api.routes.chat | request_id=3c6c4d469f6c4143bcbcedc3f965b7ec | Usage Record: {'request_id': '3c6c4d469f6c4143bcbcedc3f965b7ec', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 391, 'estimated_output_tokens': 87, 'estimated_total_tokens': 478, 'provider_input_tokens': 332, 'provider_output_tokens': 71, 'provider_total_tokens': 403, 'status': 'success', 'latency_ms': 19990, 'created_at': datetime.datetime(2026, 9, 23, 17, 46, 8, 905852)}
+2026-09-23 23:16:08,943 | INFO | app.api.routes.chat | request_id=3c6c4d469f6c4143bcbcedc3f965b7ec | Chat streaming completed successfully
+2026-09-23 23:16:20,867 | WARNING | app.api.routes.chat | request_id=b29827d24ef54834ac5e48e1d350e2e1 | Prompt injection detected | reason=system_prompt_extraction
+2026-09-23 23:16:27,557 | INFO | app.main | Health check requested
+2026-09-23 23:16:35,406 | WARNING | app.api.routes.chat | request_id=433e2a5691624bd98b160588289990b5 | Prompt injection detected | reason=instruction_override
+2026-09-23 23:16:42,508 | INFO | app.api.routes.chat | request_id=dabbe0978799443b996127ed22eedc5c | Streaming chat request received
+2026-09-23 23:16:42,514 | INFO | app.api.routes.chat | request_id=dabbe0978799443b996127ed22eedc5c | Context messages=2 | System prompt tokens=373 | History tokens=105 | User tokens=13 | Total context tokens=491 | Remaining context tokens=3509 | Max context tokens=4000
+2026-09-23 23:16:42,520 | INFO | app.services.ollama_service | request_id=dabbe0978799443b996127ed22eedc5c | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:16:46,706 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:16:48,545 | INFO | app.services.ollama_service | request_id=dabbe0978799443b996127ed22eedc5c | Ollama stream finished. Usage: prompt_eval_count=423, eval_count=29
+2026-09-23 23:16:48,546 | INFO | app.api.routes.chat | request_id=dabbe0978799443b996127ed22eedc5c | Final Token Usage: {'estimated_input_tokens': 491, 'estimated_output_tokens': 38, 'estimated_total_tokens': 529, 'provider_input_tokens': 423, 'provider_output_tokens': 29, 'provider_total_tokens': 452}
+2026-09-23 23:16:48,546 | INFO | app.api.routes.chat | request_id=dabbe0978799443b996127ed22eedc5c | Usage Record: {'request_id': 'dabbe0978799443b996127ed22eedc5c', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 491, 'estimated_output_tokens': 38, 'estimated_total_tokens': 529, 'provider_input_tokens': 423, 'provider_output_tokens': 29, 'provider_total_tokens': 452, 'status': 'success', 'latency_ms': 6029, 'created_at': datetime.datetime(2026, 9, 23, 17, 46, 48, 546171)}
+2026-09-23 23:16:48,556 | INFO | app.api.routes.chat | request_id=dabbe0978799443b996127ed22eedc5c | Chat streaming completed successfully
+2026-09-23 23:16:57,571 | INFO | app.main | Health check requested
+2026-09-23 23:17:01,192 | INFO | app.api.routes.chat | request_id=5ac93f1d6eb44109aa17c2ce81e72fb6 | Streaming chat request received
+2026-09-23 23:17:01,201 | INFO | app.api.routes.chat | request_id=5ac93f1d6eb44109aa17c2ce81e72fb6 | Context messages=4 | System prompt tokens=373 | History tokens=156 | User tokens=14 | Total context tokens=543 | Remaining context tokens=3457 | Max context tokens=4000
+2026-09-23 23:17:01,207 | INFO | app.services.ollama_service | request_id=5ac93f1d6eb44109aa17c2ce81e72fb6 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:17:04,576 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:17:06,093 | INFO | app.services.ollama_service | request_id=5ac93f1d6eb44109aa17c2ce81e72fb6 | Ollama stream finished. Usage: prompt_eval_count=473, eval_count=25
+2026-09-23 23:17:06,094 | INFO | app.api.routes.chat | request_id=5ac93f1d6eb44109aa17c2ce81e72fb6 | Final Token Usage: {'estimated_input_tokens': 543, 'estimated_output_tokens': 27, 'estimated_total_tokens': 570, 'provider_input_tokens': 473, 'provider_output_tokens': 25, 'provider_total_tokens': 498}
+2026-09-23 23:17:06,094 | INFO | app.api.routes.chat | request_id=5ac93f1d6eb44109aa17c2ce81e72fb6 | Usage Record: {'request_id': '5ac93f1d6eb44109aa17c2ce81e72fb6', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 543, 'estimated_output_tokens': 27, 'estimated_total_tokens': 570, 'provider_input_tokens': 473, 'provider_output_tokens': 25, 'provider_total_tokens': 498, 'status': 'success', 'latency_ms': 4891, 'created_at': datetime.datetime(2026, 9, 23, 17, 47, 6, 94052)}
+2026-09-23 23:17:06,104 | INFO | app.api.routes.chat | request_id=5ac93f1d6eb44109aa17c2ce81e72fb6 | Chat streaming completed successfully
+2026-09-23 23:17:16,239 | INFO | app.api.routes.chat | request_id=942842cecaee4c94815f9dff37ebe435 | Streaming chat request received
+2026-09-23 23:17:16,247 | INFO | app.api.routes.chat | request_id=942842cecaee4c94815f9dff37ebe435 | Context messages=6 | System prompt tokens=373 | History tokens=197 | User tokens=13 | Total context tokens=583 | Remaining context tokens=3417 | Max context tokens=4000
+2026-09-23 23:17:16,249 | INFO | app.services.ollama_service | request_id=942842cecaee4c94815f9dff37ebe435 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:17:19,533 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:17:27,569 | INFO | app.main | Health check requested
+2026-09-23 23:17:28,451 | INFO | app.services.ollama_service | request_id=942842cecaee4c94815f9dff37ebe435 | Ollama stream finished. Usage: prompt_eval_count=516, eval_count=97
+2026-09-23 23:17:28,451 | INFO | app.api.routes.chat | request_id=942842cecaee4c94815f9dff37ebe435 | Final Token Usage: {'estimated_input_tokens': 583, 'estimated_output_tokens': 122, 'estimated_total_tokens': 705, 'provider_input_tokens': 516, 'provider_output_tokens': 97, 'provider_total_tokens': 613}
+2026-09-23 23:17:28,452 | INFO | app.api.routes.chat | request_id=942842cecaee4c94815f9dff37ebe435 | Usage Record: {'request_id': '942842cecaee4c94815f9dff37ebe435', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 583, 'estimated_output_tokens': 122, 'estimated_total_tokens': 705, 'provider_input_tokens': 516, 'provider_output_tokens': 97, 'provider_total_tokens': 613, 'status': 'success', 'latency_ms': 12203, 'created_at': datetime.datetime(2026, 9, 23, 17, 47, 28, 451830)}
+2026-09-23 23:17:28,469 | INFO | app.api.routes.chat | request_id=942842cecaee4c94815f9dff37ebe435 | Chat streaming completed successfully
+2026-09-23 23:17:36,909 | INFO | app.api.routes.chat | request_id=842d6020e13a4cbca4deedbf17920e2f | Streaming chat request received
+2026-09-23 23:17:36,916 | INFO | app.api.routes.chat | request_id=842d6020e13a4cbca4deedbf17920e2f | Context messages=8 | System prompt tokens=373 | History tokens=332 | User tokens=3 | Total context tokens=708 | Remaining context tokens=3292 | Max context tokens=4000
+2026-09-23 23:17:36,923 | INFO | app.services.ollama_service | request_id=842d6020e13a4cbca4deedbf17920e2f | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:17:41,378 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:17:54,247 | INFO | app.services.ollama_service | request_id=842d6020e13a4cbca4deedbf17920e2f | Ollama stream finished. Usage: prompt_eval_count=626, eval_count=120
+2026-09-23 23:17:54,248 | INFO | app.api.routes.chat | request_id=842d6020e13a4cbca4deedbf17920e2f | Final Token Usage: {'estimated_input_tokens': 708, 'estimated_output_tokens': 160, 'estimated_total_tokens': 868, 'provider_input_tokens': 626, 'provider_output_tokens': 120, 'provider_total_tokens': 746}
+2026-09-23 23:17:54,249 | INFO | app.api.routes.chat | request_id=842d6020e13a4cbca4deedbf17920e2f | Usage Record: {'request_id': '842d6020e13a4cbca4deedbf17920e2f', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 708, 'estimated_output_tokens': 160, 'estimated_total_tokens': 868, 'provider_input_tokens': 626, 'provider_output_tokens': 120, 'provider_total_tokens': 746, 'status': 'success', 'latency_ms': 17330, 'created_at': datetime.datetime(2026, 9, 23, 17, 47, 54, 248929)}
+2026-09-23 23:17:54,272 | INFO | app.api.routes.chat | request_id=842d6020e13a4cbca4deedbf17920e2f | Chat streaming completed successfully
+2026-09-23 23:17:57,553 | INFO | app.main | Health check requested
+2026-09-23 23:18:27,783 | INFO | app.main | Health check requested
+2026-09-23 23:18:57,776 | INFO | app.main | Health check requested
+2026-09-23 23:19:33,783 | INFO | app.main | Health check requested
+2026-09-23 23:20:33,795 | INFO | app.main | Health check requested
+2026-09-23 23:20:50,563 | INFO | app.api.routes.chat | request_id=21210a5c4f4647939a247fb60d703090 | Streaming chat request received
+2026-09-23 23:20:50,569 | INFO | app.api.routes.chat | request_id=21210a5c4f4647939a247fb60d703090 | Context messages=10 | System prompt tokens=373 | History tokens=495 | User tokens=4 | Total context tokens=872 | Remaining context tokens=3128 | Max context tokens=4000
+2026-09-23 23:20:50,572 | INFO | app.services.ollama_service | request_id=21210a5c4f4647939a247fb60d703090 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:20:55,396 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:20:57,560 | INFO | app.main | Health check requested
+2026-09-23 23:21:01,542 | INFO | app.services.ollama_service | request_id=21210a5c4f4647939a247fb60d703090 | Ollama stream finished. Usage: prompt_eval_count=759, eval_count=64
+2026-09-23 23:21:01,543 | INFO | app.api.routes.chat | request_id=21210a5c4f4647939a247fb60d703090 | Final Token Usage: {'estimated_input_tokens': 872, 'estimated_output_tokens': 88, 'estimated_total_tokens': 960, 'provider_input_tokens': 759, 'provider_output_tokens': 64, 'provider_total_tokens': 823}
+2026-09-23 23:21:01,544 | INFO | app.api.routes.chat | request_id=21210a5c4f4647939a247fb60d703090 | Usage Record: {'request_id': '21210a5c4f4647939a247fb60d703090', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 872, 'estimated_output_tokens': 88, 'estimated_total_tokens': 960, 'provider_input_tokens': 759, 'provider_output_tokens': 64, 'provider_total_tokens': 823, 'status': 'success', 'latency_ms': 10973, 'created_at': datetime.datetime(2026, 9, 23, 17, 51, 1, 543844)}
+2026-09-23 23:21:01,564 | INFO | app.api.routes.chat | request_id=21210a5c4f4647939a247fb60d703090 | Chat streaming completed successfully
+2026-09-23 23:21:27,791 | INFO | app.main | Health check requested
+2026-09-23 23:21:57,782 | INFO | app.main | Health check requested
+2026-09-23 23:22:33,784 | INFO | app.main | Health check requested
+2026-09-23 23:23:33,784 | INFO | app.main | Health check requested
+2026-09-23 23:24:33,782 | INFO | app.main | Health check requested
+2026-09-23 23:25:33,795 | INFO | app.main | Health check requested
+2026-09-23 23:26:33,769 | INFO | app.main | Health check requested
+2026-09-23 23:27:33,774 | INFO | app.main | Health check requested
+2026-09-23 23:28:33,777 | INFO | app.main | Health check requested
+2026-09-23 23:29:33,775 | INFO | app.main | Health check requested
+2026-09-23 23:30:33,771 | INFO | app.main | Health check requested
+2026-09-23 23:31:33,775 | INFO | app.main | Health check requested
+2026-09-23 23:32:33,774 | INFO | app.main | Health check requested
+2026-09-23 23:33:33,774 | INFO | app.main | Health check requested
+2026-09-23 23:34:33,775 | INFO | app.main | Health check requested
+2026-09-23 23:35:33,776 | INFO | app.main | Health check requested
+2026-09-23 23:36:33,775 | INFO | app.main | Health check requested
+2026-09-23 23:37:33,778 | INFO | app.main | Health check requested
+2026-09-23 23:38:33,776 | INFO | app.main | Health check requested
+2026-09-23 23:39:33,776 | INFO | app.main | Health check requested
+2026-09-23 23:40:33,789 | INFO | app.main | Health check requested
+2026-09-23 23:41:33,774 | INFO | app.main | Health check requested
+2026-09-23 23:42:33,774 | INFO | app.main | Health check requested
+2026-09-23 23:43:33,777 | INFO | app.main | Health check requested
+2026-09-23 23:44:33,777 | INFO | app.main | Health check requested
+2026-09-23 23:45:33,786 | INFO | app.main | Health check requested
+2026-09-23 23:46:33,788 | INFO | app.main | Health check requested
+2026-09-23 23:47:33,781 | INFO | app.main | Health check requested
+2026-09-23 23:48:33,799 | INFO | app.main | Health check requested
+2026-09-23 23:48:43,744 | INFO | app.main | Health check requested
+2026-09-23 23:48:43,749 | INFO | app.main | Health check requested
+2026-09-23 23:48:43,754 | INFO | app.main | Health check requested
+2026-09-23 23:48:43,755 | INFO | app.main | Health check requested
+2026-09-23 23:48:51,334 | WARNING | app.api.routes.chat | request_id=50eec62be366412ba408937e9627386f | Prompt injection detected | reason=instruction_override
+2026-09-23 23:49:01,827 | WARNING | app.api.routes.chat | request_id=38870b42a5c2423b88865489910edfab | Prompt injection detected | reason=instruction_override
+2026-09-23 23:49:11,233 | WARNING | app.api.routes.chat | request_id=79685e66971e4b988266e7d4e634cd60 | Prompt injection detected | reason=role_override
+2026-09-23 23:49:13,788 | INFO | app.main | Health check requested
+2026-09-23 23:49:19,188 | WARNING | app.api.routes.chat | request_id=816731670fdc483aa2890fcbba97fa7a | Prompt injection detected | reason=system_prompt_extraction
+2026-09-23 23:49:26,697 | WARNING | app.api.routes.chat | request_id=dcda42e9652d41c6bc04f1e0dcc60995 | Prompt injection detected | reason=system_prompt_extraction
+2026-09-23 23:49:34,272 | WARNING | app.api.routes.chat | request_id=4926ee0881ca4a2e8a205f3b40ed8648 | Prompt injection detected | reason=fake_authority
+2026-09-23 23:49:42,320 | INFO | app.api.routes.chat | request_id=18263ae515044b4aa144d76e071825e7 | Streaming chat request received
+2026-09-23 23:49:42,401 | INFO | app.api.routes.chat | request_id=18263ae515044b4aa144d76e071825e7 | Context messages=12 | System prompt tokens=373 | History tokens=587 | User tokens=3 | Total context tokens=963 | Remaining context tokens=3037 | Max context tokens=4000
+2026-09-23 23:49:42,403 | INFO | app.services.ollama_service | request_id=18263ae515044b4aa144d76e071825e7 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:49:43,758 | INFO | app.main | Health check requested
+2026-09-23 23:50:06,049 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:50:13,789 | INFO | app.main | Health check requested
+2026-09-23 23:50:16,013 | INFO | app.services.ollama_service | request_id=18263ae515044b4aa144d76e071825e7 | Ollama stream finished. Usage: prompt_eval_count=835, eval_count=118
+2026-09-23 23:50:16,013 | INFO | app.api.routes.chat | request_id=18263ae515044b4aa144d76e071825e7 | Final Token Usage: {'estimated_input_tokens': 963, 'estimated_output_tokens': 157, 'estimated_total_tokens': 1120, 'provider_input_tokens': 835, 'provider_output_tokens': 118, 'provider_total_tokens': 953}
+2026-09-23 23:50:16,014 | INFO | app.api.routes.chat | request_id=18263ae515044b4aa144d76e071825e7 | Usage Record: {'request_id': '18263ae515044b4aa144d76e071825e7', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 963, 'estimated_output_tokens': 157, 'estimated_total_tokens': 1120, 'provider_input_tokens': 835, 'provider_output_tokens': 118, 'provider_total_tokens': 953, 'status': 'success', 'latency_ms': 33611, 'created_at': datetime.datetime(2026, 9, 23, 18, 20, 16, 13877)}
+2026-09-23 23:50:16,065 | INFO | app.api.routes.chat | request_id=18263ae515044b4aa144d76e071825e7 | Chat streaming completed successfully
+2026-09-23 23:50:43,780 | INFO | app.main | Health check requested
+2026-09-23 23:51:13,753 | INFO | app.main | Health check requested
+2026-09-23 23:51:43,784 | INFO | app.main | Health check requested
+2026-09-23 23:52:13,781 | INFO | app.main | Health check requested
+2026-09-23 23:52:31,337 | INFO | app.api.routes.chat | request_id=6ca3d1c754bb4944a6dcedc065d76473 | Streaming chat request received
+2026-09-23 23:52:31,342 | INFO | app.api.routes.chat | request_id=6ca3d1c754bb4944a6dcedc065d76473 | Context messages=14 | System prompt tokens=373 | History tokens=747 | User tokens=5 | Total context tokens=1125 | Remaining context tokens=2875 | Max context tokens=4000
+2026-09-23 23:52:31,346 | INFO | app.services.ollama_service | request_id=6ca3d1c754bb4944a6dcedc065d76473 | Starting Ollama stream (qwen2.5:3b)
+2026-09-23 23:52:36,236 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-23 23:52:40,711 | INFO | app.services.ollama_service | request_id=6ca3d1c754bb4944a6dcedc065d76473 | Ollama stream finished. Usage: prompt_eval_count=966, eval_count=61
+2026-09-23 23:52:40,712 | INFO | app.api.routes.chat | request_id=6ca3d1c754bb4944a6dcedc065d76473 | Final Token Usage: {'estimated_input_tokens': 1125, 'estimated_output_tokens': 82, 'estimated_total_tokens': 1207, 'provider_input_tokens': 966, 'provider_output_tokens': 61, 'provider_total_tokens': 1027}
+2026-09-23 23:52:40,712 | INFO | app.api.routes.chat | request_id=6ca3d1c754bb4944a6dcedc065d76473 | Usage Record: {'request_id': '6ca3d1c754bb4944a6dcedc065d76473', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 1125, 'estimated_output_tokens': 82, 'estimated_total_tokens': 1207, 'provider_input_tokens': 966, 'provider_output_tokens': 61, 'provider_total_tokens': 1027, 'status': 'success', 'latency_ms': 9368, 'created_at': datetime.datetime(2026, 9, 23, 18, 22, 40, 712118)}
+2026-09-23 23:52:40,727 | INFO | app.api.routes.chat | request_id=6ca3d1c754bb4944a6dcedc065d76473 | Chat streaming completed successfully
+2026-09-23 23:52:43,780 | INFO | app.main | Health check requested
+2026-09-23 23:53:13,782 | INFO | app.main | Health check requested
+2026-09-23 23:54:20,787 | INFO | app.main | Health check requested
+2026-09-23 23:58:18,069 | INFO | app.main | Health check requested
+2026-09-23 23:58:18,069 | INFO | app.main | Health check requested
+2026-09-23 23:58:18,071 | INFO | app.main | Health check requested
+2026-09-23 23:58:33,784 | INFO | app.main | Health check requested
+2026-09-23 23:59:33,785 | INFO | app.main | Health check requested
+2026-09-23 23:59:58,867 | INFO | app.main | Health check requested
+2026-09-24 00:00:00,347 | INFO | app.main | Health check requested
+2026-09-24 00:00:00,350 | INFO | app.main | Health check requested
+2026-09-24 00:00:00,354 | INFO | app.main | Health check requested
+2026-09-24 00:00:00,354 | INFO | app.main | Health check requested
+2026-09-24 00:00:23,177 | INFO | app.api.routes.chat | request_id=1df5f1477a064a989cce112ee77ab803 | Streaming chat request received
+2026-09-24 00:00:23,241 | INFO | app.api.routes.chat | request_id=1df5f1477a064a989cce112ee77ab803 | Context messages=16 | System prompt tokens=373 | History tokens=834 | User tokens=12 | Total context tokens=1219 | Remaining context tokens=2781 | Max context tokens=4000
+2026-09-24 00:00:23,242 | INFO | app.services.ollama_service | request_id=1df5f1477a064a989cce112ee77ab803 | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 00:00:30,782 | INFO | app.main | Health check requested
+2026-09-24 00:00:58,723 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 00:01:00,364 | INFO | app.main | Health check requested
+2026-09-24 00:01:03,603 | INFO | app.services.ollama_service | request_id=1df5f1477a064a989cce112ee77ab803 | Ollama stream finished. Usage: prompt_eval_count=1043, eval_count=46
+2026-09-24 00:01:03,605 | INFO | app.api.routes.chat | request_id=1df5f1477a064a989cce112ee77ab803 | Final Token Usage: {'estimated_input_tokens': 1219, 'estimated_output_tokens': 56, 'estimated_total_tokens': 1275, 'provider_input_tokens': 1043, 'provider_output_tokens': 46, 'provider_total_tokens': 1089}
+2026-09-24 00:01:03,605 | INFO | app.api.routes.chat | request_id=1df5f1477a064a989cce112ee77ab803 | Usage Record: {'request_id': '1df5f1477a064a989cce112ee77ab803', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 1219, 'estimated_output_tokens': 56, 'estimated_total_tokens': 1275, 'provider_input_tokens': 1043, 'provider_output_tokens': 46, 'provider_total_tokens': 1089, 'status': 'success', 'latency_ms': 40363, 'created_at': datetime.datetime(2026, 9, 23, 18, 31, 3, 605064)}
+2026-09-24 00:01:03,645 | INFO | app.api.routes.chat | request_id=1df5f1477a064a989cce112ee77ab803 | Chat streaming completed successfully
+2026-09-24 00:01:07,345 | INFO | app.api.routes.chat | request_id=0bb624c6a5504cf58b3dee3b11bdc2c0 | Streaming chat request received
+2026-09-24 00:01:07,352 | INFO | app.api.routes.chat | request_id=0bb624c6a5504cf58b3dee3b11bdc2c0 | Context messages=18 | System prompt tokens=373 | History tokens=902 | User tokens=3 | Total context tokens=1278 | Remaining context tokens=2722 | Max context tokens=4000
+2026-09-24 00:01:07,355 | INFO | app.services.ollama_service | request_id=0bb624c6a5504cf58b3dee3b11bdc2c0 | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 00:01:09,194 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 00:01:19,611 | INFO | app.services.ollama_service | request_id=0bb624c6a5504cf58b3dee3b11bdc2c0 | Ollama stream finished. Usage: prompt_eval_count=1101, eval_count=89
+2026-09-24 00:01:19,612 | INFO | app.api.routes.chat | request_id=0bb624c6a5504cf58b3dee3b11bdc2c0 | Final Token Usage: {'estimated_input_tokens': 1278, 'estimated_output_tokens': 88, 'estimated_total_tokens': 1366, 'provider_input_tokens': 1101, 'provider_output_tokens': 89, 'provider_total_tokens': 1190}
+2026-09-24 00:01:19,613 | INFO | app.api.routes.chat | request_id=0bb624c6a5504cf58b3dee3b11bdc2c0 | Usage Record: {'request_id': '0bb624c6a5504cf58b3dee3b11bdc2c0', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 1278, 'estimated_output_tokens': 88, 'estimated_total_tokens': 1366, 'provider_input_tokens': 1101, 'provider_output_tokens': 89, 'provider_total_tokens': 1190, 'status': 'success', 'latency_ms': 12259, 'created_at': datetime.datetime(2026, 9, 23, 18, 31, 19, 612980)}
+2026-09-24 00:01:19,636 | INFO | app.api.routes.chat | request_id=0bb624c6a5504cf58b3dee3b11bdc2c0 | Chat streaming completed successfully
+2026-09-24 00:01:30,785 | INFO | app.main | Health check requested
+2026-09-24 00:02:00,786 | INFO | app.main | Health check requested
+2026-09-24 00:02:30,789 | INFO | app.main | Health check requested
+2026-09-24 00:03:00,779 | INFO | app.main | Health check requested
+2026-09-24 00:03:33,784 | INFO | app.main | Health check requested
+2026-09-24 00:04:33,791 | INFO | app.main | Health check requested
+2026-09-24 00:05:33,795 | INFO | app.main | Health check requested
+2026-09-24 00:06:33,788 | INFO | app.main | Health check requested
+2026-09-24 00:07:33,787 | INFO | app.main | Health check requested
+2026-09-24 00:08:16,938 | INFO | app.main | Health check requested
+2026-09-24 00:08:19,795 | INFO | app.main | Health check requested
+2026-09-24 00:08:19,799 | INFO | app.main | Health check requested
+2026-09-24 00:08:19,806 | INFO | app.main | Health check requested
+2026-09-24 00:08:19,806 | INFO | app.main | Health check requested
+2026-09-24 00:08:22,357 | INFO | app.api.routes.chat | request_id=78c72f20a7604be39c4b7ca327bf512d | Streaming chat request received
+2026-09-24 00:08:22,468 | INFO | app.api.routes.chat | request_id=78c72f20a7604be39c4b7ca327bf512d | Context messages=20 | System prompt tokens=373 | History tokens=993 | User tokens=3 | Total context tokens=1369 | Remaining context tokens=2631 | Max context tokens=4000
+2026-09-24 00:08:22,468 | INFO | app.services.ollama_service | request_id=78c72f20a7604be39c4b7ca327bf512d | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 00:08:50,789 | INFO | app.main | Health check requested
+2026-09-24 00:09:03,885 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 00:09:15,661 | INFO | app.services.ollama_service | request_id=78c72f20a7604be39c4b7ca327bf512d | Ollama stream finished. Usage: prompt_eval_count=1202, eval_count=118
+2026-09-24 00:09:15,663 | INFO | app.api.routes.chat | request_id=78c72f20a7604be39c4b7ca327bf512d | Final Token Usage: {'estimated_input_tokens': 1369, 'estimated_output_tokens': 157, 'estimated_total_tokens': 1526, 'provider_input_tokens': 1202, 'provider_output_tokens': 118, 'provider_total_tokens': 1320}
+2026-09-24 00:09:15,663 | INFO | app.api.routes.chat | request_id=78c72f20a7604be39c4b7ca327bf512d | Usage Record: {'request_id': '78c72f20a7604be39c4b7ca327bf512d', 'conversation_id': '4f4797af-13ec-4337-a9aa-389b431460d4', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 1369, 'estimated_output_tokens': 157, 'estimated_total_tokens': 1526, 'provider_input_tokens': 1202, 'provider_output_tokens': 118, 'provider_total_tokens': 1320, 'status': 'success', 'latency_ms': 53189, 'created_at': datetime.datetime(2026, 9, 23, 18, 39, 15, 663296)}
+2026-09-24 00:09:15,704 | INFO | app.api.routes.chat | request_id=78c72f20a7604be39c4b7ca327bf512d | Chat streaming completed successfully
+2026-09-24 00:09:20,781 | INFO | app.main | Health check requested
+2026-09-24 00:09:50,779 | INFO | app.main | Health check requested
+2026-09-24 00:19:11,770 | INFO | app.main | Health check requested
+2026-09-24 00:19:11,774 | INFO | app.main | Health check requested
+2026-09-24 00:19:11,782 | INFO | app.main | Health check requested
+2026-09-24 00:19:11,794 | INFO | app.main | Health check requested
+2026-09-24 00:19:42,025 | INFO | app.main | Health check requested
+2026-09-24 00:20:12,026 | INFO | app.main | Health check requested
+2026-09-24 00:20:42,010 | INFO | app.main | Health check requested
+2026-09-24 00:21:12,030 | INFO | app.main | Health check requested
+2026-09-24 00:21:42,026 | INFO | app.main | Health check requested
+2026-09-24 00:22:12,026 | INFO | app.main | Health check requested
+2026-09-24 00:23:31,026 | INFO | app.main | Health check requested
+2026-09-24 00:25:25,890 | INFO | app.main | Health check requested
+2026-09-24 00:25:31,013 | INFO | app.main | Health check requested
+2026-09-24 00:26:31,021 | INFO | app.main | Health check requested
+2026-09-24 00:27:31,029 | INFO | app.main | Health check requested
+2026-09-24 00:28:31,015 | INFO | app.main | Health check requested
+2026-09-24 00:29:31,032 | INFO | app.main | Health check requested
+2026-09-24 00:30:50,504 | INFO | app.main | Health check requested
+2026-09-24 00:31:18,397 | INFO | app.main | Health check requested
+2026-09-24 00:31:24,915 | INFO | app.api.routes.chat | request_id=765390909d7147aaa87fcbdaf4de1528 | Streaming chat request received
+2026-09-24 00:31:25,127 | INFO | app.api.routes.chat | request_id=765390909d7147aaa87fcbdaf4de1528 | Context messages=0 | System prompt tokens=373 | History tokens=0 | User tokens=4 | Total context tokens=377 | Remaining context tokens=3623 | Max context tokens=4000
+2026-09-24 00:31:25,134 | INFO | app.services.ollama_service | request_id=765390909d7147aaa87fcbdaf4de1528 | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 00:31:40,669 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 00:31:41,767 | INFO | app.main | Health check requested
+2026-09-24 00:31:47,247 | INFO | app.services.ollama_service | request_id=765390909d7147aaa87fcbdaf4de1528 | Ollama stream finished. Usage: prompt_eval_count=325, eval_count=85
+2026-09-24 00:31:47,247 | INFO | app.api.routes.chat | request_id=765390909d7147aaa87fcbdaf4de1528 | Final Token Usage: {'estimated_input_tokens': 377, 'estimated_output_tokens': 102, 'estimated_total_tokens': 479, 'provider_input_tokens': 325, 'provider_output_tokens': 85, 'provider_total_tokens': 410}
+2026-09-24 00:31:47,247 | INFO | app.api.routes.chat | request_id=765390909d7147aaa87fcbdaf4de1528 | Usage Record: {'request_id': '765390909d7147aaa87fcbdaf4de1528', 'conversation_id': 'c0de4223-6f3c-48f7-9774-565de4724c1e', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 377, 'estimated_output_tokens': 102, 'estimated_total_tokens': 479, 'provider_input_tokens': 325, 'provider_output_tokens': 85, 'provider_total_tokens': 410, 'status': 'success', 'latency_ms': 22116, 'created_at': datetime.datetime(2026, 9, 23, 19, 1, 47, 247853)}
+2026-09-24 00:31:47,279 | INFO | app.api.routes.chat | request_id=765390909d7147aaa87fcbdaf4de1528 | Chat streaming completed successfully
+2026-09-24 00:31:58,584 | WARNING | app.api.routes.chat | request_id=590104fba3b34587b817a260e768305d | Prompt injection detected | reason=system_prompt_extraction
+2026-09-24 00:32:12,018 | INFO | app.main | Health check requested
+2026-09-24 16:23:14,842 | INFO | app.main | Health check requested
+2026-09-24 16:23:14,852 | INFO | app.main | Health check requested
+2026-09-24 16:23:14,852 | INFO | app.main | Health check requested
+2026-09-24 16:23:14,866 | INFO | app.main | Health check requested
+2026-09-24 16:23:21,020 | INFO | app.main | Health check requested
+2026-09-24 16:23:21,020 | INFO | app.main | Health check requested
+2026-09-24 16:23:21,029 | INFO | app.main | Health check requested
+2026-09-24 16:23:21,039 | INFO | app.main | Health check requested
+2026-09-24 16:23:51,790 | INFO | app.main | Health check requested
+2026-09-24 16:24:21,793 | INFO | app.main | Health check requested
+2026-09-24 16:24:51,797 | INFO | app.main | Health check requested
+2026-09-24 16:25:21,780 | INFO | app.main | Health check requested
+2026-09-24 16:25:51,773 | INFO | app.main | Health check requested
+2026-09-24 16:26:21,782 | INFO | app.main | Health check requested
+2026-09-24 16:27:13,816 | INFO | app.main | Health check requested
+2026-09-24 16:28:13,796 | INFO | app.main | Health check requested
+2026-09-24 16:29:13,805 | INFO | app.main | Health check requested
+2026-09-24 16:30:13,807 | INFO | app.main | Health check requested
+2026-09-24 16:31:13,793 | INFO | app.main | Health check requested
+2026-09-24 16:32:14,673 | INFO | app.main | Health check requested
+2026-09-24 16:33:13,822 | INFO | app.main | Health check requested
+2026-09-24 16:34:13,789 | INFO | app.main | Health check requested
+2026-09-24 16:35:13,802 | INFO | app.main | Health check requested
+2026-09-24 16:36:13,790 | INFO | app.main | Health check requested
+2026-09-24 16:37:13,845 | INFO | app.main | Health check requested
+2026-09-24 16:38:13,789 | INFO | app.main | Health check requested
+2026-09-24 16:38:57,939 | INFO | app.main | Health check requested
+2026-09-24 16:38:58,415 | INFO | app.main | Health check requested
+2026-09-24 16:38:58,416 | INFO | app.main | Health check requested
+2026-09-24 16:38:58,422 | INFO | app.main | Health check requested
+2026-09-24 16:38:58,430 | INFO | app.main | Health check requested
+2026-09-24 16:38:59,208 | INFO | app.main | Health check requested
+2026-09-24 16:38:59,222 | INFO | app.main | Health check requested
+2026-09-24 16:38:59,222 | INFO | app.main | Health check requested
+2026-09-24 16:38:59,227 | INFO | app.main | Health check requested
+2026-09-24 16:39:06,491 | INFO | app.api.routes.chat | request_id=a3a2835e822a4427a2abc1f41681f652 | Streaming chat request received
+2026-09-24 16:39:06,849 | INFO | app.api.routes.chat | request_id=a3a2835e822a4427a2abc1f41681f652 | Context messages=0 | System prompt tokens=373 | History tokens=0 | User tokens=3 | Total context tokens=376 | Remaining context tokens=3624 | Max context tokens=4000
+2026-09-24 16:39:06,849 | INFO | app.services.ollama_service | request_id=a3a2835e822a4427a2abc1f41681f652 | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 16:39:19,813 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 16:39:25,394 | INFO | app.services.ollama_service | request_id=a3a2835e822a4427a2abc1f41681f652 | Ollama stream finished. Usage: prompt_eval_count=324, eval_count=80
+2026-09-24 16:39:25,395 | INFO | app.api.routes.chat | request_id=a3a2835e822a4427a2abc1f41681f652 | Final Token Usage: {'estimated_input_tokens': 376, 'estimated_output_tokens': 100, 'estimated_total_tokens': 476, 'provider_input_tokens': 324, 'provider_output_tokens': 80, 'provider_total_tokens': 404}
+2026-09-24 16:39:25,395 | INFO | app.api.routes.chat | request_id=a3a2835e822a4427a2abc1f41681f652 | Usage Record: {'request_id': 'a3a2835e822a4427a2abc1f41681f652', 'conversation_id': 'bc714ac3-53d6-450c-a344-5be8741efcfc', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 376, 'estimated_output_tokens': 100, 'estimated_total_tokens': 476, 'provider_input_tokens': 324, 'provider_output_tokens': 80, 'provider_total_tokens': 404, 'status': 'success', 'latency_ms': 18536, 'created_at': datetime.datetime(2026, 9, 24, 11, 9, 25, 395233)}
+2026-09-24 16:39:25,436 | INFO | app.api.routes.chat | request_id=a3a2835e822a4427a2abc1f41681f652 | Chat streaming completed successfully
+2026-09-24 16:39:29,785 | INFO | app.main | Health check requested
+2026-09-24 16:39:59,779 | INFO | app.main | Health check requested
+2026-09-24 16:40:29,780 | INFO | app.main | Health check requested
+2026-09-24 16:40:59,783 | INFO | app.main | Health check requested
+2026-09-24 16:41:29,784 | INFO | app.main | Health check requested
+2026-09-24 16:41:59,780 | INFO | app.main | Health check requested
+2026-09-24 16:43:08,787 | INFO | app.main | Health check requested
+2026-09-24 16:46:53,560 | INFO | app.main | Health check requested
+2026-09-24 16:46:53,566 | INFO | app.main | Health check requested
+2026-09-24 16:46:53,567 | INFO | app.main | Health check requested
+2026-09-24 16:46:53,567 | INFO | app.main | Health check requested
+2026-09-24 16:47:01,685 | INFO | app.api.routes.chat | request_id=2bf54a14cbf44d8dba0d96f824fcb61a | Streaming chat request received
+2026-09-24 16:47:01,765 | INFO | app.api.routes.chat | request_id=2bf54a14cbf44d8dba0d96f824fcb61a | Context messages=2 | System prompt tokens=373 | History tokens=103 | User tokens=4 | Total context tokens=480 | Remaining context tokens=3520 | Max context tokens=4000
+2026-09-24 16:47:01,765 | INFO | app.services.ollama_service | request_id=2bf54a14cbf44d8dba0d96f824fcb61a | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 16:47:15,337 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 16:47:21,683 | INFO | app.services.ollama_service | request_id=2bf54a14cbf44d8dba0d96f824fcb61a | Ollama stream finished. Usage: prompt_eval_count=418, eval_count=92
+2026-09-24 16:47:21,683 | INFO | app.api.routes.chat | request_id=2bf54a14cbf44d8dba0d96f824fcb61a | Final Token Usage: {'estimated_input_tokens': 480, 'estimated_output_tokens': 121, 'estimated_total_tokens': 601, 'provider_input_tokens': 418, 'provider_output_tokens': 92, 'provider_total_tokens': 510}
+2026-09-24 16:47:21,684 | INFO | app.api.routes.chat | request_id=2bf54a14cbf44d8dba0d96f824fcb61a | Usage Record: {'request_id': '2bf54a14cbf44d8dba0d96f824fcb61a', 'conversation_id': 'bc714ac3-53d6-450c-a344-5be8741efcfc', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 480, 'estimated_output_tokens': 121, 'estimated_total_tokens': 601, 'provider_input_tokens': 418, 'provider_output_tokens': 92, 'provider_total_tokens': 510, 'status': 'success', 'latency_ms': 19915, 'created_at': datetime.datetime(2026, 9, 24, 11, 17, 21, 683774)}
+2026-09-24 16:47:21,716 | INFO | app.api.routes.chat | request_id=2bf54a14cbf44d8dba0d96f824fcb61a | Chat streaming completed successfully
+2026-09-24 16:47:23,781 | INFO | app.main | Health check requested
+2026-09-24 16:47:53,777 | INFO | app.main | Health check requested
+2026-09-24 16:48:39,190 | INFO | app.main | Health check requested
+2026-09-24 16:48:53,791 | INFO | app.main | Health check requested
+2026-09-24 16:49:16,829 | INFO | app.main | Health check requested
+2026-09-24 16:49:16,829 | INFO | app.main | Health check requested
+2026-09-24 16:49:16,829 | INFO | app.main | Health check requested
+2026-09-24 16:49:16,838 | INFO | app.main | Health check requested
+2026-09-24 16:49:18,406 | INFO | app.api.routes.chat | request_id=ae6beb9c5e93486b857add3789201e1d | Streaming chat request received
+2026-09-24 16:49:18,487 | INFO | app.api.routes.chat | request_id=ae6beb9c5e93486b857add3789201e1d | Context messages=4 | System prompt tokens=373 | History tokens=228 | User tokens=3 | Total context tokens=604 | Remaining context tokens=3396 | Max context tokens=4000
+2026-09-24 16:49:18,503 | INFO | app.services.ollama_service | request_id=ae6beb9c5e93486b857add3789201e1d | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 16:49:23,181 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 16:49:28,220 | INFO | app.services.ollama_service | request_id=ae6beb9c5e93486b857add3789201e1d | Ollama stream finished. Usage: prompt_eval_count=523, eval_count=76
+2026-09-24 16:49:28,221 | INFO | app.api.routes.chat | request_id=ae6beb9c5e93486b857add3789201e1d | Final Token Usage: {'estimated_input_tokens': 604, 'estimated_output_tokens': 94, 'estimated_total_tokens': 698, 'provider_input_tokens': 523, 'provider_output_tokens': 76, 'provider_total_tokens': 599}
+2026-09-24 16:49:28,221 | INFO | app.api.routes.chat | request_id=ae6beb9c5e93486b857add3789201e1d | Usage Record: {'request_id': 'ae6beb9c5e93486b857add3789201e1d', 'conversation_id': 'bc714ac3-53d6-450c-a344-5be8741efcfc', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 604, 'estimated_output_tokens': 94, 'estimated_total_tokens': 698, 'provider_input_tokens': 523, 'provider_output_tokens': 76, 'provider_total_tokens': 599, 'status': 'success', 'latency_ms': 9720, 'created_at': datetime.datetime(2026, 9, 24, 11, 19, 28, 221436)}
+2026-09-24 16:49:28,242 | INFO | app.api.routes.chat | request_id=ae6beb9c5e93486b857add3789201e1d | Chat streaming completed successfully
+2026-09-24 16:49:47,779 | INFO | app.main | Health check requested
+2026-09-24 16:50:17,778 | INFO | app.main | Health check requested
+2026-09-24 16:50:47,780 | INFO | app.main | Health check requested
+2026-09-24 16:51:17,770 | INFO | app.main | Health check requested
+2026-09-24 16:51:47,783 | INFO | app.main | Health check requested
+2026-09-24 16:52:19,149 | INFO | app.main | Health check requested
+2026-09-24 16:53:13,786 | INFO | app.main | Health check requested
+2026-09-24 16:54:13,795 | INFO | app.main | Health check requested
+2026-09-24 16:55:13,816 | INFO | app.main | Health check requested
+2026-09-24 16:56:13,784 | INFO | app.main | Health check requested
+2026-09-24 16:56:37,445 | INFO | app.main | Health check requested
+2026-09-24 16:56:39,707 | INFO | app.api.routes.chat | request_id=b922f5afb0bb4ca3a57fa5462c18c3ce | Streaming chat request received
+2026-09-24 16:56:39,792 | INFO | app.api.routes.chat | request_id=b922f5afb0bb4ca3a57fa5462c18c3ce | Context messages=6 | System prompt tokens=373 | History tokens=325 | User tokens=3 | Total context tokens=701 | Remaining context tokens=3299 | Max context tokens=4000
+2026-09-24 16:56:39,793 | INFO | app.services.ollama_service | request_id=b922f5afb0bb4ca3a57fa5462c18c3ce | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 16:56:47,774 | INFO | app.main | Health check requested
+2026-09-24 16:57:01,526 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 16:57:08,037 | INFO | app.services.ollama_service | request_id=b922f5afb0bb4ca3a57fa5462c18c3ce | Ollama stream finished. Usage: prompt_eval_count=612, eval_count=75
+2026-09-24 16:57:08,038 | INFO | app.api.routes.chat | request_id=b922f5afb0bb4ca3a57fa5462c18c3ce | Final Token Usage: {'estimated_input_tokens': 701, 'estimated_output_tokens': 94, 'estimated_total_tokens': 795, 'provider_input_tokens': 612, 'provider_output_tokens': 75, 'provider_total_tokens': 687}
+2026-09-24 16:57:08,038 | INFO | app.api.routes.chat | request_id=b922f5afb0bb4ca3a57fa5462c18c3ce | Usage Record: {'request_id': 'b922f5afb0bb4ca3a57fa5462c18c3ce', 'conversation_id': 'bc714ac3-53d6-450c-a344-5be8741efcfc', 'model': 'qwen2.5:3b', 'request_type': 'streaming', 'estimated_input_tokens': 701, 'estimated_output_tokens': 94, 'estimated_total_tokens': 795, 'provider_input_tokens': 612, 'provider_output_tokens': 75, 'provider_total_tokens': 687, 'status': 'success', 'latency_ms': 28244, 'created_at': datetime.datetime(2026, 9, 24, 11, 27, 8, 38197)}
+2026-09-24 16:57:08,083 | INFO | app.api.routes.chat | request_id=b922f5afb0bb4ca3a57fa5462c18c3ce | Chat streaming completed successfully
+2026-09-24 16:57:17,784 | INFO | app.main | Health check requested
+2026-09-24 16:57:47,787 | INFO | app.main | Health check requested
+2026-09-24 16:58:08,475 | WARNING | app.api.routes.chat | request_id=308ca1d601034846b107ac665410a9d5 | PII detected | type=email
+2026-09-24 16:58:17,782 | INFO | app.main | Health check requested
+2026-09-24 16:58:47,780 | INFO | app.main | Health check requested
+2026-09-24 16:59:54,794 | INFO | app.main | Health check requested
+2026-09-24 17:01:13,788 | INFO | app.main | Health check requested
+2026-09-24 17:02:13,784 | INFO | app.main | Health check requested
+2026-09-24 17:03:13,808 | INFO | app.main | Health check requested
+2026-09-24 17:04:13,800 | INFO | app.main | Health check requested
+2026-09-24 17:05:13,775 | INFO | app.main | Health check requested
+2026-09-24 17:06:13,792 | INFO | app.main | Health check requested
+2026-09-24 17:07:13,802 | INFO | app.main | Health check requested
+2026-09-24 17:08:13,817 | INFO | app.main | Health check requested
+2026-09-24 17:09:13,781 | INFO | app.main | Health check requested
+2026-09-24 17:10:13,799 | INFO | app.main | Health check requested
+2026-09-24 17:11:13,805 | INFO | app.main | Health check requested
+2026-09-24 17:12:13,800 | INFO | app.main | Health check requested
+2026-09-24 17:13:13,779 | INFO | app.main | Health check requested
+2026-09-24 17:14:13,789 | INFO | app.main | Health check requested
+2026-09-24 17:15:13,915 | INFO | app.main | Health check requested
+2026-09-24 17:16:13,822 | INFO | app.main | Health check requested
+2026-09-24 17:17:13,864 | INFO | app.main | Health check requested
+2026-09-24 17:18:13,798 | INFO | app.main | Health check requested
+2026-09-24 17:20:11,527 | INFO | app.main | Health check requested
+2026-09-24 17:20:13,797 | INFO | app.main | Health check requested
+2026-09-24 17:21:13,809 | INFO | app.main | Health check requested
+2026-09-24 17:22:13,801 | INFO | app.main | Health check requested
+2026-09-24 17:23:13,818 | INFO | app.main | Health check requested
+2026-09-24 17:24:13,816 | INFO | app.main | Health check requested
+2026-09-24 17:24:33,179 | INFO | app.main | Health check requested
+2026-09-24 17:24:36,365 | INFO | app.api.routes.chat | request_id=2cebb96b16b848d08b922063ed05b5b5 | Streaming chat request received
+2026-09-24 17:24:36,484 | INFO | app.api.routes.chat | request_id=2cebb96b16b848d08b922063ed05b5b5 | Context messages=8 | System prompt tokens=373 | History tokens=422 | User tokens=1 | Total context tokens=796 | Remaining context tokens=3204 | Max context tokens=4000
+2026-09-24 17:24:36,489 | INFO | app.services.ollama_service | request_id=2cebb96b16b848d08b922063ed05b5b5 | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 17:24:47,800 | INFO | app.main | Health check requested
+2026-09-24 17:25:03,830 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 17:25:04,642 | INFO | app.services.ollama_service | request_id=2cebb96b16b848d08b922063ed05b5b5 | Ollama stream finished. Usage: prompt_eval_count=698, eval_count=10
+2026-09-24 17:25:17,784 | INFO | app.main | Health check requested
+2026-09-24 17:26:13,877 | INFO | app.main | Health check requested
+2026-09-24 17:27:14,247 | INFO | app.main | Health check requested
+2026-09-24 17:28:13,888 | INFO | app.main | Health check requested
+2026-09-24 17:29:13,823 | INFO | app.main | Health check requested
+2026-09-24 17:30:13,822 | INFO | app.main | Health check requested
+2026-09-24 17:31:13,968 | INFO | app.main | Health check requested
+2026-09-24 17:32:13,844 | INFO | app.main | Health check requested
+2026-09-24 17:32:43,115 | INFO | app.main | Health check requested
+2026-09-24 17:32:46,837 | INFO | app.main | Health check requested
+2026-09-24 17:32:56,563 | WARNING | app.api.routes.chat | request_id=276887d2a3534d888c7d1ce8484e7eb0 | Prompt injection detected | reason=instruction_override
+2026-09-24 17:33:03,813 | WARNING | app.api.routes.chat | request_id=bc5e5915d98541909f9b1b4a960e2f85 | Prompt injection detected | reason=instruction_reset
+2026-09-24 17:33:10,101 | WARNING | app.api.routes.chat | request_id=6ee91672b7cb495f9af119e8d3847edb | Prompt injection detected | reason=role_override
+2026-09-24 17:33:16,276 | WARNING | app.api.routes.chat | request_id=a822db2a118140f090caa4ec055850e2 | Prompt injection detected | reason=system_prompt_extraction
+2026-09-24 17:33:16,866 | INFO | app.main | Health check requested
+2026-09-24 17:33:23,595 | INFO | app.api.routes.chat | request_id=e222b9c4b89249afad523e220c110155 | Streaming chat request received
+2026-09-24 17:33:23,775 | INFO | app.api.routes.chat | request_id=e222b9c4b89249afad523e220c110155 | Context messages=0 | System prompt tokens=373 | History tokens=0 | User tokens=8 | Total context tokens=381 | Remaining context tokens=3619 | Max context tokens=4000
+2026-09-24 17:33:23,778 | INFO | app.services.ollama_service | request_id=e222b9c4b89249afad523e220c110155 | Starting Ollama stream (qwen2.5:3b)
+2026-09-24 17:33:39,943 | INFO | httpx | HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-09-24 17:33:44,093 | INFO | app.services.ollama_service | request_id=e222b9c4b89249afad523e220c110155 | Ollama stream finished. Usage: prompt_eval_count=324, eval_count=53
+2026-09-24 17:33:46,869 | INFO | app.main | Health check requested
+2026-09-24 17:34:16,847 | INFO | app.main | Health check requested
+2026-09-24 17:34:47,778 | INFO | app.main | Health check requested
+2026-09-24 17:35:17,787 | INFO | app.main | Health check requested
+2026-09-24 17:36:13,799 | INFO | app.main | Health check requested
+2026-09-24 17:37:13,982 | INFO | app.main | Health check requested
+2026-09-24 17:38:13,788 | INFO | app.main | Health check requested
+2026-09-24 17:39:13,926 | INFO | app.main | Health check requested
+2026-09-24 17:40:13,811 | INFO | app.main | Health check requested
+2026-09-24 17:41:13,812 | INFO | app.main | Health check requested
+2026-09-24 17:42:13,804 | INFO | app.main | Health check requested
+2026-09-24 17:43:13,804 | INFO | app.main | Health check requested
+2026-09-24 17:44:15,679 | INFO | app.main | Health check requested
+2026-09-24 17:45:13,809 | INFO | app.main | Health check requested
+2026-09-24 17:46:13,877 | INFO | app.main | Health check requested
+2026-09-24 17:47:13,816 | INFO | app.main | Health check requested
+2026-09-24 17:48:13,824 | INFO | app.main | Health check requested
+2026-09-24 17:49:13,842 | INFO | app.main | Health check requested
+2026-09-24 17:50:13,828 | INFO | app.main | Health check requested
+2026-09-24 17:51:13,832 | INFO | app.main | Health check requested
+2026-09-24 17:52:13,852 | INFO | app.main | Health check requested
+2026-09-24 17:53:13,804 | INFO | app.main | Health check requested
+2026-09-24 17:54:13,816 | INFO | app.main | Health check requested
+2026-09-24 17:55:13,828 | INFO | app.main | Health check requested
+2026-09-24 17:56:13,866 | INFO | app.main | Health check requested
+2026-09-24 17:57:13,830 | INFO | app.main | Health check requested
+2026-09-24 17:58:13,813 | INFO | app.main | Health check requested
+2026-09-24 17:59:13,811 | INFO | app.main | Health check requested
+2026-09-24 18:00:13,830 | INFO | app.main | Health check requested
+2026-09-24 18:01:13,793 | INFO | app.main | Health check requested
+2026-09-24 18:02:13,950 | INFO | app.main | Health check requested
+2026-09-24 18:03:13,800 | INFO | app.main | Health check requested
+2026-09-24 18:04:13,811 | INFO | app.main | Health check requested

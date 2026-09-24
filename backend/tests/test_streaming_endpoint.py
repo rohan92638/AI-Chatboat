@@ -35,6 +35,7 @@ def test_streaming_endpoint():
                 print(chunk, end="", flush=True)
             print("\n\nSUCCESS: Streaming endpoint is working!")
         else:
+            response.read()
             print(f"Error: {response.text}")
 
 if __name__ == "__main__":

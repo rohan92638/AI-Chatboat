@@ -1,11 +1,12 @@
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.request_id import generate_request_id
+from app.core.rate_limiter import limiter
 from app.database.connection import get_db
 from app.schemas.chat import ChatRequest, ChatResponse
 from app.services.context_manager import ContextManager
@@ -14,7 +15,19 @@ from app.services.memory_service import MemoryService
 from app.services.token_manager import TokenManager
 from app.services.usage_service import UsageService
 import time
-
+from app.security.prompt_injection import (
+    detect_prompt_injection,
+)
+from app.security.input_validator import (
+    normalize_input,
+    validate_message,
+)
+from app.security.output_guard import (
+    validate_output,
+    validate_stream_chunk,
+)
+from app.security.moderation import moderate_text
+from app.security.pii_detector import detect_pii
 
 logger = logging.getLogger(__name__)
 
@@ -36,11 +49,91 @@ usage_service = UsageService()
 # ============================================================
 
 @router.post("/chat", response_model=ChatResponse)
+@limiter.limit("10/minute")
 def chat(
-    request: ChatRequest,
+    request: Request,
+    chat_request: ChatRequest,
     db: Session = Depends(get_db),
 ):
     request_id = generate_request_id()
+    normalized_message = normalize_input(
+        chat_request.message
+    )
+
+    validation_result = validate_message(
+        normalized_message,
+        max_length=4000,
+    )
+
+    if not validation_result.is_valid:
+        logger.warning(
+            "request_id=%s | Input validation failed | reason=%s",
+            request_id,
+            validation_result.reason,
+        )
+
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Invalid message. Please check your input "
+                "and try again."
+            ),
+        )
+    injection_result = detect_prompt_injection(
+        normalized_message
+    )
+
+    if injection_result.is_injection:
+        logger.warning(
+            "request_id=%s | Prompt injection detected | "
+            "reason=%s",
+            request_id,
+            injection_result.reason,
+        )
+
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Your message appears to contain a prompt "
+                "injection attempt. Please rephrase your request."
+            ),
+        )
+
+    # 3. Moderation check
+    moderation_result = moderate_text(
+        normalized_message
+    )
+
+    if not moderation_result.is_safe:
+        logger.warning(
+            "request_id=%s | Moderation blocked input | reason=%s",
+            request_id,
+            moderation_result.reason,
+        )
+
+        raise HTTPException(
+            status_code=400,
+            detail="Your message was blocked by the content safety filter.",
+        )
+    # 4. PII detection
+    pii_result = detect_pii(
+        normalized_message
+    )
+
+    if pii_result.contains_pii:
+        logger.warning(
+            "request_id=%s | PII detected | type=%s",
+            request_id,
+            pii_result.pii_type,
+        )
+
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Your message contains personal information. "
+                "Please remove sensitive information and try again."
+            ),
+        )
 
     try:
         logger.info(
@@ -51,7 +144,7 @@ def chat(
         # 1. Get or create conversation
         conversation = memory_service.get_or_create_conversation(
             db,
-            request.conversation_id,
+            chat_request.conversation_id,
         )
 
         # 2. Get conversation history from PostgreSQL
@@ -64,7 +157,7 @@ def chat(
         # 3. Select relevant context
         context_result = context_manager.build_context(
             messages,
-            current_message=request.message,
+            current_message=normalized_message,
             max_tokens=settings.MAX_CONTEXT_TOKENS,
         )
 
@@ -80,7 +173,7 @@ def chat(
 
         token_usage = token_manager.build_usage(
             history_tokens=history_tokens,
-            user_message=request.message,
+            user_message=normalized_message,
             system_prompt=settings.SYSTEM_PROMPT,
             max_context_tokens=settings.MAX_CONTEXT_TOKENS,
         )
@@ -120,11 +213,43 @@ def chat(
         ai_service = get_ai_service()
         start_time = time.perf_counter()
         result = ai_service.generate_response(
-            request.message,
+            normalized_message,
             request_id,
             history,
         )
         latency_ms = int((time.perf_counter() - start_time) * 1000)
+        
+        # 6.1 Validate AI output
+        output_result = validate_output(
+            result["response"]
+        )
+
+        if not output_result.is_safe:
+            logger.warning(
+                "request_id=%s | Output guard blocked response | reason=%s",
+                request_id,
+                output_result.reason,
+            )
+            raise HTTPException(
+                status_code=500,
+                detail="The AI generated an unsafe response.",
+            )
+
+        # 6.2 Moderate AI output
+        moderation_result = moderate_text(
+            result["response"]
+        )
+
+        if not moderation_result.is_safe:
+            logger.warning(
+                "request_id=%s | Moderation blocked AI output | reason=%s",
+                request_id,
+                moderation_result.reason,
+            )
+            raise HTTPException(
+                status_code=500,
+                detail="The AI generated an unsafe response.",
+            )
 
         # 7. Build final token usage structure
         estimated_output_tokens = token_manager.estimate_text_tokens(
@@ -175,7 +300,7 @@ def chat(
         memory_service.save_user_message(
             db,
             conversation,
-            request.message,
+            normalized_message,
         )
 
         # 9. Save assistant response
@@ -241,11 +366,92 @@ def chat(
 # ============================================================
 
 @router.post("/chat/stream")
+@limiter.limit("10/minute")
 def chat_stream(
-    request: ChatRequest,
+    request: Request,
+    chat_request: ChatRequest,
     db: Session = Depends(get_db),
 ):
     request_id = generate_request_id()
+    normalized_message = normalize_input(
+        chat_request.message
+    )
+
+    validation_result = validate_message(
+        normalized_message,
+        max_length=4000,
+    )
+
+    if not validation_result.is_valid:
+        logger.warning(
+            "request_id=%s | Input validation failed | reason=%s",
+            request_id,
+            validation_result.reason,
+        )
+
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Invalid message. Please check your input "
+                "and try again."
+            ),
+        )
+    injection_result = detect_prompt_injection(
+        normalized_message
+    )
+
+    if injection_result.is_injection:
+        logger.warning(
+            "request_id=%s | Prompt injection detected | "
+            "reason=%s",
+            request_id,
+            injection_result.reason,
+        )
+
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Your message appears to contain a prompt "
+                "injection attempt. Please rephrase your request."
+            ),
+        )
+
+    # 3. Moderation check
+    moderation_result = moderate_text(
+        normalized_message
+    )
+
+    if not moderation_result.is_safe:
+        logger.warning(
+            "request_id=%s | Moderation blocked input | reason=%s",
+            request_id,
+            moderation_result.reason,
+        )
+
+        raise HTTPException(
+            status_code=400,
+            detail="Your message was blocked by the content safety filter.",
+        )
+
+    # 4. PII detection
+    pii_result = detect_pii(
+        normalized_message
+    )
+
+    if pii_result.contains_pii:
+        logger.warning(
+            "request_id=%s | PII detected | type=%s",
+            request_id,
+            pii_result.pii_type,
+        )
+
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Your message contains personal information. "
+                "Please remove sensitive information and try again."
+            ),
+        )
 
     try:
         logger.info(
@@ -256,7 +462,7 @@ def chat_stream(
         # 1. Get or create conversation
         conversation = memory_service.get_or_create_conversation(
             db,
-            request.conversation_id,
+            chat_request.conversation_id,
         )
 
         # 2. Get conversation history from PostgreSQL
@@ -269,7 +475,7 @@ def chat_stream(
         # 3. Select relevant context
         context_result = context_manager.build_context(
             messages,
-            current_message=request.message,
+            current_message=normalized_message,
             max_tokens=settings.MAX_CONTEXT_TOKENS,
         )
 
@@ -285,7 +491,7 @@ def chat_stream(
 
         token_usage = token_manager.build_usage(
             history_tokens=history_tokens,
-            user_message=request.message,
+            user_message=normalized_message,
             system_prompt=settings.SYSTEM_PROMPT,
             max_context_tokens=settings.MAX_CONTEXT_TOKENS,
         )
@@ -327,7 +533,7 @@ def chat_stream(
 
         start_time = time.perf_counter()
         stream = ai_service.generate_stream(
-            request.message,
+            normalized_message,
             request_id,
             history,
             usage_container=stream_usage,
@@ -336,14 +542,47 @@ def chat_stream(
         def stream_generator():
             full_response = ""
             stream_successful = False
+            stream_buffer = ""
 
             try:
                 for chunk in stream:
+
+                    # Validate streaming output before sending it
+                    is_safe, reason, stream_buffer = validate_stream_chunk(
+                        chunk,
+                        buffer=stream_buffer,
+                    )
+
+                    if not is_safe:
+                        logger.warning(
+                            "request_id=%s | Streaming output blocked | reason=%s",
+                            request_id,
+                            reason,
+                        )
+
+                        yield "\n\n[Error: AI response blocked by security guard.]"
+                        break
+
                     full_response += chunk
+                    # Moderate accumulated AI output
+                    moderation_result = moderate_text(
+                        full_response
+                    )
+
+                    if not moderation_result.is_safe:
+                        logger.warning(
+                            "request_id=%s | Moderation blocked streaming AI output | reason=%s",
+                            request_id,
+                            moderation_result.reason,
+                        )
+
+                        yield "\n\n[Error: AI response blocked by content safety filter.]"
+                        break
+
                     yield chunk
 
-                stream_successful = True
-
+                else:
+                    stream_successful = True
             except Exception:
                 logger.exception(
                     "request_id=%s | Streaming error",
@@ -373,7 +612,7 @@ def chat_stream(
 
             usage_record = usage_service.build_usage_record(
                 request_id=request_id,
-                conversation_id=request.conversation_id,
+                conversation_id=chat_request.conversation_id,
                 model=get_active_model_name(),
                 request_type="streaming",
                 final_usage=final_usage,
@@ -412,7 +651,7 @@ def chat_stream(
                 memory_service.save_user_message(
                     db,
                     conversation,
-                    request.message,
+                    normalized_message,
                 )
 
                 if full_response:
